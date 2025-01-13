@@ -1,4 +1,4 @@
-import {useTranslation} from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
     const { t } = useTranslation('about');
@@ -7,7 +7,7 @@ const About = () => {
         <div>
             <h1>{t('About page content')}</h1>
         </div>
-    )
-}
+    );
+};
 
 export default About;
