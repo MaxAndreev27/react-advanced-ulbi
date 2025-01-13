@@ -12,7 +12,7 @@ export const LangSwitcher = ({className}: LangSwitcherProps) => {
     const { t, i18n } = useTranslation('translation');
 
     const toggle = async () => {
-        i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
+        i18n.changeLanguage(i18n.language === 'ua' ? 'en' : 'ua');
     }
 
     return (
