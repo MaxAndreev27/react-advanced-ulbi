@@ -14,7 +14,7 @@ const preview: Preview = {
         },
     },
     decorators: [
-        (Story, {Theme: theme}) => (
+        (Story) => (
             <BrowserRouter>
                 <ThemeProvider>
                     <div className={`app ${Theme.LIGHT}`}>
