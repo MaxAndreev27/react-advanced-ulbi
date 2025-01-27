@@ -54,7 +54,7 @@ export const PrimaryDark: Story = {
         theme: AppLinkTheme.PRIMARY,
     },
     decorators: [
-        (Story, {Theme: theme}) => (
+        (Story) => (
             <div className={`app ${Theme.DARK}`}>
                 <Story />
             </div>
@@ -68,7 +68,7 @@ export const SecondaryDark: Story = {
         theme: AppLinkTheme.SECONDARY,
     },
     decorators: [
-        (Story, {Theme: theme}) => (
+        (Story) => (
             <div className={`app ${Theme.DARK}`}>
                 <Story />
             </div>
@@ -82,7 +82,7 @@ export const RedDark: Story = {
         theme: AppLinkTheme.RED,
     },
     decorators: [
-        (Story, {Theme: theme}) => (
+        (Story) => (
             <div className={`app ${Theme.DARK}`}>
                 <Story />
             </div>

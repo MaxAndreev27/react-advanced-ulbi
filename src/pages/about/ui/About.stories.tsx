@@ -33,7 +33,7 @@ export const Dark: Story = {
     args: {
     },
     decorators: [
-        (Story, {Theme: theme}) => (
+        (Story) => (
             <div className={`app ${Theme.DARK}`}>
                 <Story />
             </div>

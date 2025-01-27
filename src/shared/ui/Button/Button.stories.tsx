@@ -51,7 +51,7 @@ export const OutlineDark: Story = {
         theme: ThemeButton.OUTLINE,
     },
     decorators: [
-        (Story, {Theme: theme}) => (
+        (Story) => (
             <div className={`app ${Theme.DARK}`}>
                 <Story />
             </div>
