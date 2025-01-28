@@ -1,7 +1,6 @@
 import type {Preview} from '@storybook/react';
 import 'app/styles/index.scss';
 import { BrowserRouter } from 'react-router-dom';
-
 import {Theme, ThemeProvider} from "../../src/app/providers/ThemeProvider";
 
 const preview: Preview = {
