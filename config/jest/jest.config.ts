@@ -3,7 +3,7 @@ import path from 'path';
 
 const config: Config = {
     clearMocks: true,
-    testEnvironment: 'jsdom',
+    testEnvironment: 'jest-fixed-jsdom',
     coveragePathIgnorePatterns: [
         '\\\\node_modules\\\\',
     ],

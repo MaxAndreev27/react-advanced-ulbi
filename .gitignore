@@ -50,6 +50,10 @@ testem.log
 # Storybook
 /storybook-static
 
+# Loki
+.loki/report.html
+.loki/report.json
+
 # System files
 .DS_Store
 Thumbs.db
