@@ -17,19 +17,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - name: install modules
+      - name: 🚀 install modules
         run: npm install
-      - name: build production project
+      - name: 🏗️ build production project
         run: npm run build:prod
         if: always()
-      - name: linting typescript
+      - name: 🐞 linting typescript
         run: npm run lint:ts
         if: always()
-      - name: linting css
+      - name: 🎨 linting css
         run: npm run lint:scss
-      - name: unit testing
+      - name: 🧪 unit testing
         if: always()
         run: npm run test:unit
-      - name: build storybook
+      - name: 📖 build storybook
         run: npm run storybook:build
         if: always()
