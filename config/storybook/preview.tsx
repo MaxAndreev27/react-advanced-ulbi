@@ -15,7 +15,7 @@ const preview: Preview = {
     decorators: [
         (Story) => (
             <BrowserRouter>
-                <ThemeProvider>
+                <ThemeProvider initialTheme={Theme.LIGHT}>
                     <div className={`app ${Theme.LIGHT}`}>
                         {/* 👇 Decorators in Storybook also accept a function. Replace <Story/> with Story() to enable it  */}
                         <Story />

@@ -7,6 +7,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import js from "@eslint/js";
 import { FlatCompat } from "@eslint/eslintrc";
+import reactHooks from "eslint-plugin-react-hooks";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -20,11 +21,18 @@ export default [...compat.extends(
     "plugin:react/recommended",
     "plugin:i18next/recommended",
     "plugin:storybook/recommended",
+    "plugin:react-hooks/recommended"
 ), {
+    settings: {
+        react: {
+            version: "detect",
+        },
+    },
     plugins: {
         react,
         "@typescript-eslint": typescriptEslint,
         i18next: i18Next,
+        "react-hooks": reactHooks,
     },
 
     languageOptions: {
@@ -71,15 +79,16 @@ export default [...compat.extends(
             ignoreAttribute: ["data-testid", "to"],
         }],
 
-        "max-len": ["error", {
-            ignoreComments: true,
-            code: 120,
-        }],
+        "max-len": ["error", { ignoreComments: true, code: 120,}],
+        'jsx-a11y/no-static-element-interactions': 'off',
+        'jsx-a11y/click-events-have-key-events': 'off',
+        'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+        'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
     },
 }, {
-    files: ["**/src/**/*.test.{ts,tsx}"],
-
+    files: ["**/src/**/*.{test,stories}.{ts,tsx}"],
     rules: {
         "i18next/no-literal-string": "off",
+        'max-len': 'off',
     },
 }];
