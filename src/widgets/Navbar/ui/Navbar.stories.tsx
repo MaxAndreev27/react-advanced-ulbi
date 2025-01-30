@@ -26,13 +26,18 @@ type Story = StoryObj<typeof Navbar>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Light: Story = {
     args: {
-
-    }
+    },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story/>
+            </div>
+        ),
+    ]
 };
 
 export const Dark: Story = {
     args: {
-
     },
     decorators: [
         (Story) => (

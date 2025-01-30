@@ -29,6 +29,13 @@ export const Primary: Story = {
     args: {
         children: 'Text',
     },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story/>
+            </div>
+        ),
+    ]
 };
 
 export const Clear: Story = {
@@ -36,6 +43,13 @@ export const Clear: Story = {
         children: 'Text',
         theme: ButtonTheme.CLEAR,
     },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story/>
+            </div>
+        ),
+    ]
 };
 
 export const ClearInverted: Story = {
@@ -43,6 +57,13 @@ export const ClearInverted: Story = {
         children: 'Text',
         theme: ButtonTheme.CLEAR_INVERTED,
     },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story/>
+            </div>
+        ),
+    ]
 };
 
 export const Outline: Story = {
@@ -50,6 +71,13 @@ export const Outline: Story = {
         children: 'Text',
         theme: ButtonTheme.OUTLINE,
     },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story/>
+            </div>
+        ),
+    ]
 };
 
 export const OutlineSizeL: Story = {
@@ -58,6 +86,13 @@ export const OutlineSizeL: Story = {
         theme: ButtonTheme.OUTLINE,
         size: ButtonSize.L,
     },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story/>
+            </div>
+        ),
+    ]
 };
 
 export const OutlineSizeXL: Story = {
@@ -66,6 +101,13 @@ export const OutlineSizeXL: Story = {
         theme: ButtonTheme.OUTLINE,
         size: ButtonSize.XL,
     },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story/>
+            </div>
+        ),
+    ]
 };
 
 export const OutlineDark: Story = {
@@ -87,6 +129,13 @@ export const BackgroundTheme: Story = {
         children: 'Text',
         theme: ButtonTheme.BACKGROUND,
     },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story/>
+            </div>
+        ),
+    ]
 };
 
 export const BackgroundInverted: Story = {
@@ -94,6 +143,13 @@ export const BackgroundInverted: Story = {
         children: 'Text',
         theme: ButtonTheme.BACKGROUND_INVERTED,
     },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story/>
+            </div>
+        ),
+    ]
 };
 
 export const Square: Story = {
@@ -102,6 +158,13 @@ export const Square: Story = {
         theme: ButtonTheme.BACKGROUND_INVERTED,
         square: true,
     },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story/>
+            </div>
+        ),
+    ]
 };
 
 export const SquareSizeL: Story = {
@@ -111,6 +174,13 @@ export const SquareSizeL: Story = {
         square: true,
         size: ButtonSize.L,
     },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story/>
+            </div>
+        ),
+    ]
 };
 
 export const SquareSizeXL: Story = {
@@ -120,4 +190,11 @@ export const SquareSizeXL: Story = {
         square: true,
         size: ButtonSize.XL,
     },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story/>
+            </div>
+        ),
+    ]
 };

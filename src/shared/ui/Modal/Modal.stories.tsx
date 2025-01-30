@@ -28,7 +28,14 @@ export const Primary: Story = {
     args: {
         isOpen: true,
         children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam.\n ',
-    }
+    },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story/>
+            </div>
+        ),
+    ]
 };
 
 export const Dark: Story = {

@@ -27,6 +27,13 @@ type Story = StoryObj<typeof Main>;
 export const Normal: Story = {
     args: {
     },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story/>
+            </div>
+        ),
+    ]
 };
 
 export const Dark: Story = {

@@ -32,6 +32,13 @@ export const Primary: Story = {
         children: 'Text',
         theme: AppLinkTheme.PRIMARY,
     },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story/>
+            </div>
+        ),
+    ]
 };
 
 export const Secondary: Story = {
@@ -39,6 +46,13 @@ export const Secondary: Story = {
         children: 'Text',
         theme: AppLinkTheme.SECONDARY,
     },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story/>
+            </div>
+        ),
+    ]
 };
 
 export const Red: Story = {
@@ -46,6 +60,13 @@ export const Red: Story = {
         children: 'Text',
         theme: AppLinkTheme.RED,
     },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story/>
+            </div>
+        ),
+    ]
 };
 
 export const PrimaryDark: Story = {
