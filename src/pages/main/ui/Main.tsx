@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import {Counter} from "entities/Counter";
 
 const Main = () => {
     const { t } = useTranslation('main');
@@ -6,6 +7,7 @@ const Main = () => {
     return (
         <div>
             <h1>{t('Main page content')}</h1>
+            <Counter />
         </div>
     );
 };

@@ -84,6 +84,7 @@ export default [...compat.extends(
         'jsx-a11y/click-events-have-key-events': 'off',
         'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
         'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
+        'no-param-reassign': 'off',
     },
 }, {
     files: ["**/src/**/*.{test,stories}.{ts,tsx}"],
