@@ -24,7 +24,6 @@ export const Modal = (props: ModalProps) => {
     } = props;
 
     const [isClosing, setIsClosing] = useState(false);
-
     const timerRef = useRef<ReturnType<typeof setTimeout>| null>(null);
     const { theme } = useTheme();
 
@@ -35,8 +34,6 @@ export const Modal = (props: ModalProps) => {
                 onClose();
                 setIsClosing(false);
             }, ANIMATION_DELAY);
-            onClose();
-            setIsClosing(false);
         }
     }, [onClose]);
 
@@ -65,7 +62,6 @@ export const Modal = (props: ModalProps) => {
     const mods: Record<string, boolean> = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
-        [cls[theme]]: true,
     };
 
     return (
