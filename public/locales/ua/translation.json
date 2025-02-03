@@ -1,5 +1,9 @@
 {
   "Language": "UA",
   "Language long": "Мова UA",
-  "Page not found": "Сторінка не знайдена"
+  "Page not found": "Сторінка не знайдена",
+  "Login": "Логін",
+  "Enter username": "Введіть логін",
+  "Enter password": "Введіть пароль",
+  "Enter": "Ввійти"
 }
