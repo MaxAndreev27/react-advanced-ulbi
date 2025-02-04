@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Theme } from "app/providers/ThemeProvider";
-import { LoginForm } from "./LoginForm";
+import { Theme } from 'app/providers/ThemeProvider';
+import { LoginForm } from './LoginForm';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof LoginForm> = {
@@ -25,27 +25,23 @@ type Story = StoryObj<typeof LoginForm>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Light: Story = {
-    args: {
-
-    },
+    args: {},
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
-                <Story/>
+                <Story />
             </div>
         ),
-    ]
+    ],
 };
 
 export const Dark: Story = {
-    args: {
-
-    },
+    args: {},
     decorators: [
         (Story) => (
             <div className={`app ${Theme.DARK}`}>
                 <Story />
             </div>
         ),
-    ]
+    ],
 };

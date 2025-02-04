@@ -1,6 +1,6 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {Theme} from "app/providers/ThemeProvider";
-import {Modal} from "./Modal";
+import type { Meta, StoryObj } from '@storybook/react';
+import { Theme } from 'app/providers/ThemeProvider';
+import { Modal } from './Modal';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof Modal> = {
@@ -27,27 +27,29 @@ type Story = StoryObj<typeof Modal>;
 export const Primary: Story = {
     args: {
         isOpen: true,
-        children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam.\n ',
+        children:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam.\n ',
     },
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
-                <Story/>
+                <Story />
             </div>
         ),
-    ]
+    ],
 };
 
 export const Dark: Story = {
     args: {
         isOpen: true,
-        children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam.\n ',
+        children:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam.\n ',
     },
     decorators: [
         (Story) => (
             <div className={`app ${Theme.DARK}`}>
-                <Story/>
+                <Story />
             </div>
         ),
-    ]
+    ],
 };

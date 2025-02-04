@@ -1,7 +1,6 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {AppLink, AppLinkTheme} from "./AppLink";
-import {Theme} from "app/providers/ThemeProvider";
-
+import type { Meta, StoryObj } from '@storybook/react';
+import { AppLink, AppLinkTheme } from './AppLink';
+import { Theme } from 'app/providers/ThemeProvider';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof AppLink> = {
@@ -35,10 +34,10 @@ export const Primary: Story = {
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
-                <Story/>
+                <Story />
             </div>
         ),
-    ]
+    ],
 };
 
 export const Secondary: Story = {
@@ -49,10 +48,10 @@ export const Secondary: Story = {
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
-                <Story/>
+                <Story />
             </div>
         ),
-    ]
+    ],
 };
 
 export const Red: Story = {
@@ -63,10 +62,10 @@ export const Red: Story = {
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
-                <Story/>
+                <Story />
             </div>
         ),
-    ]
+    ],
 };
 
 export const PrimaryDark: Story = {
@@ -80,7 +79,7 @@ export const PrimaryDark: Story = {
                 <Story />
             </div>
         ),
-    ]
+    ],
 };
 
 export const SecondaryDark: Story = {
@@ -94,7 +93,7 @@ export const SecondaryDark: Story = {
                 <Story />
             </div>
         ),
-    ]
+    ],
 };
 
 export const RedDark: Story = {
@@ -108,5 +107,5 @@ export const RedDark: Story = {
                 <Story />
             </div>
         ),
-    ]
+    ],
 };

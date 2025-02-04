@@ -1,7 +1,7 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {fn} from '@storybook/test';
-import {Input} from './Input';
-import {Theme} from "app/providers/ThemeProvider";
+import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
+import { Input } from './Input';
+import { Theme } from 'app/providers/ThemeProvider';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof Input> = {
@@ -15,7 +15,7 @@ const meta: Meta<typeof Input> = {
     tags: ['autodocs'],
     // More on argTypes: https://storybook.js.org/docs/api/argtypes
     argTypes: {
-    //     backgroundColor: { control: 'color' },
+        //     backgroundColor: { control: 'color' },
     },
     // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
     args: { onClick: fn() },
@@ -33,10 +33,10 @@ export const Primary: Story = {
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
-                <Story/>
+                <Story />
             </div>
         ),
-    ]
+    ],
 };
 
 export const Dark: Story = {
@@ -47,8 +47,8 @@ export const Dark: Story = {
     decorators: [
         (Story) => (
             <div className={`app ${Theme.DARK}`}>
-                <Story/>
+                <Story />
             </div>
         ),
-    ]
+    ],
 };

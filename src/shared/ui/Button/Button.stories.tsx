@@ -1,7 +1,7 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {fn} from '@storybook/test';
-import {Button, ButtonSize, ButtonTheme} from './Button';
-import {Theme} from "app/providers/ThemeProvider";
+import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
+import { Button, ButtonSize, ButtonTheme } from './Button';
+import { Theme } from 'app/providers/ThemeProvider';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof Button> = {
@@ -32,10 +32,10 @@ export const Primary: Story = {
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
-                <Story/>
+                <Story />
             </div>
         ),
-    ]
+    ],
 };
 
 export const Clear: Story = {
@@ -46,10 +46,10 @@ export const Clear: Story = {
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
-                <Story/>
+                <Story />
             </div>
         ),
-    ]
+    ],
 };
 
 export const ClearInverted: Story = {
@@ -60,10 +60,10 @@ export const ClearInverted: Story = {
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
-                <Story/>
+                <Story />
             </div>
         ),
-    ]
+    ],
 };
 
 export const Outline: Story = {
@@ -74,10 +74,10 @@ export const Outline: Story = {
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
-                <Story/>
+                <Story />
             </div>
         ),
-    ]
+    ],
 };
 
 export const OutlineSizeL: Story = {
@@ -89,10 +89,10 @@ export const OutlineSizeL: Story = {
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
-                <Story/>
+                <Story />
             </div>
         ),
-    ]
+    ],
 };
 
 export const OutlineSizeXL: Story = {
@@ -104,10 +104,10 @@ export const OutlineSizeXL: Story = {
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
-                <Story/>
+                <Story />
             </div>
         ),
-    ]
+    ],
 };
 
 export const OutlineDark: Story = {
@@ -121,7 +121,7 @@ export const OutlineDark: Story = {
                 <Story />
             </div>
         ),
-    ]
+    ],
 };
 
 export const BackgroundTheme: Story = {
@@ -132,10 +132,10 @@ export const BackgroundTheme: Story = {
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
-                <Story/>
+                <Story />
             </div>
         ),
-    ]
+    ],
 };
 
 export const BackgroundInverted: Story = {
@@ -146,10 +146,10 @@ export const BackgroundInverted: Story = {
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
-                <Story/>
+                <Story />
             </div>
         ),
-    ]
+    ],
 };
 
 export const Square: Story = {
@@ -161,10 +161,10 @@ export const Square: Story = {
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
-                <Story/>
+                <Story />
             </div>
         ),
-    ]
+    ],
 };
 
 export const SquareSizeL: Story = {
@@ -177,10 +177,10 @@ export const SquareSizeL: Story = {
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
-                <Story/>
+                <Story />
             </div>
         ),
-    ]
+    ],
 };
 
 export const SquareSizeXL: Story = {
@@ -193,8 +193,8 @@ export const SquareSizeXL: Story = {
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
-                <Story/>
+                <Story />
             </div>
         ),
-    ]
+    ],
 };
