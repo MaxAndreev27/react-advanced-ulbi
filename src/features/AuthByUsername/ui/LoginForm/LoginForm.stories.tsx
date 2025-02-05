@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Theme } from 'app/providers/ThemeProvider';
 import { LoginForm } from './LoginForm';
+import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof LoginForm> = {
@@ -24,24 +24,48 @@ export default meta;
 type Story = StoryObj<typeof LoginForm>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Light: Story = {
+export const Primary: Story = {
     args: {},
     decorators: [
-        (Story) => (
-            <div className={`app ${Theme.LIGHT}`}>
-                <Story />
-            </div>
-        ),
+        (Story) => {
+            const state: Partial<StateSchema> = { loginForm: { username: '123', password: 'asd', isLoading: false } };
+            return (
+                <StoreProvider initialState={state}>
+                    <Story />
+                </StoreProvider>
+            );
+        },
     ],
 };
 
-export const Dark: Story = {
+export const WithError: Story = {
     args: {},
     decorators: [
-        (Story) => (
-            <div className={`app ${Theme.DARK}`}>
-                <Story />
-            </div>
-        ),
+        (Story) => {
+            const state: Partial<StateSchema> = {
+                loginForm: { username: '123', password: 'asd', isLoading: false, error: 'ERROR' },
+            };
+            return (
+                <StoreProvider initialState={state}>
+                    <Story />
+                </StoreProvider>
+            );
+        },
+    ],
+};
+
+export const Loading: Story = {
+    args: {},
+    decorators: [
+        (Story) => {
+            const state: Partial<StateSchema> = {
+                loginForm: { username: '123', password: 'asd', isLoading: true },
+            };
+            return (
+                <StoreProvider initialState={state}>
+                    <Story />
+                </StoreProvider>
+            );
+        },
     ],
 };

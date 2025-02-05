@@ -198,3 +198,18 @@ export const SquareSizeXL: Story = {
         ),
     ],
 };
+
+export const Disabled: Story = {
+    args: {
+        children: '>',
+        theme: ButtonTheme.OUTLINE,
+        disabled: true,
+    },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story />
+            </div>
+        ),
+    ],
+};

@@ -5,5 +5,8 @@
     "Login": "Логін",
     "Enter username": "Введіть логін",
     "Enter password": "Введіть пароль",
-    "Enter": "Ввійти"
+    "Enter": "Ввійти",
+    "Logout": "Вийти",
+    "Authorization form": "Форма авторизації",
+    "You have entered an incorrect login or password": "Ви ввели неправильний логін або пароль"
 }
