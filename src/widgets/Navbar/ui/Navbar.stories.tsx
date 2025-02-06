@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
 import { Navbar } from './Navbar';
+import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof Navbar> = {
@@ -43,5 +44,23 @@ export const Dark: Story = {
                 <Story />
             </div>
         ),
+    ],
+};
+
+export const AuthNavbar: Story = {
+    args: {},
+    decorators: [
+        (Story) => {
+            const state: Partial<StateSchema> = {
+                user: {
+                    authData: { id: '1', username: 'admin' },
+                },
+            };
+            return (
+                <StoreProvider initialState={state}>
+                    <Story />
+                </StoreProvider>
+            );
+        },
     ],
 };
