@@ -24,7 +24,6 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
 
     const store = useStore() as ReduxStoreWithManager;
 
-    // const { username, password, error, isLoading } = useSelector(getLoginState);
     const username = useSelector(getLoginUsername);
     const password = useSelector(getLoginPassword);
     const isLoading = useSelector(getLoginIsLoading);
