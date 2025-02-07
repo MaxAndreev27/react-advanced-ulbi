@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import LoginForm from './LoginForm';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
+import { ReducersMapObject } from '@reduxjs/toolkit';
+import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof LoginForm> = {
@@ -28,9 +30,14 @@ export const Primary: Story = {
     args: {},
     decorators: [
         (Story) => {
-            const state: Partial<StateSchema> = { loginForm: { username: '123', password: 'asd', isLoading: false } };
+            const state: Partial<StateSchema> = {
+                loginForm: { username: '123', password: 'asd', isLoading: false },
+            };
+            const defaultAsyncReducers: Partial<ReducersMapObject<StateSchema>> = {
+                loginForm: loginReducer,
+            };
             return (
-                <StoreProvider initialState={state}>
+                <StoreProvider initialState={state} asyncReducers={{ ...defaultAsyncReducers }}>
                     <Story />
                 </StoreProvider>
             );
@@ -45,8 +52,11 @@ export const WithError: Story = {
             const state: Partial<StateSchema> = {
                 loginForm: { username: '123', password: 'asd', isLoading: false, error: 'ERROR' },
             };
+            const defaultAsyncReducers: Partial<ReducersMapObject<StateSchema>> = {
+                loginForm: loginReducer,
+            };
             return (
-                <StoreProvider initialState={state}>
+                <StoreProvider initialState={state} asyncReducers={{ ...defaultAsyncReducers }}>
                     <Story />
                 </StoreProvider>
             );
@@ -61,8 +71,11 @@ export const Loading: Story = {
             const state: Partial<StateSchema> = {
                 loginForm: { username: '123', password: 'asd', isLoading: true },
             };
+            const defaultAsyncReducers: Partial<ReducersMapObject<StateSchema>> = {
+                loginForm: loginReducer,
+            };
             return (
-                <StoreProvider initialState={state}>
+                <StoreProvider initialState={state} asyncReducers={{ ...defaultAsyncReducers }}>
                     <Story />
                 </StoreProvider>
             );

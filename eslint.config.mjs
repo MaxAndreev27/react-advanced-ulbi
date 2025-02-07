@@ -20,7 +20,13 @@ const compat = new FlatCompat({
 
 export default [
     {
-        ignores: ['**/node_modules', '**/build', '**/storybook-static', '**/eslint.config.mjs', '**/jest.config.js'],
+        ignores: [
+            '**/node_modules',
+            '**/build',
+            '**/storybook-static',
+            '**/eslint.config.mjs',
+            '**/jest.config.js',
+        ],
     },
     eslintConfigPrettier,
     ...compat.extends(
@@ -92,7 +98,7 @@ export default [
                 },
             ],
 
-            'max-len': ['error', { ignoreComments: true, code: 120 }],
+            'max-len': ['error', { ignoreComments: true, code: 100 }],
             'jsx-a11y/no-static-element-interactions': 'off',
             'jsx-a11y/click-events-have-key-events': 'off',
             'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
