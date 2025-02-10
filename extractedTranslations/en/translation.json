@@ -1,6 +1,8 @@
 {
   "About page content": "About page content",
   "About us": "About us",
+  "AboutPage page content": "AboutPage page content",
+  "AboutPage us": "AboutPage us",
   "Authorisation": "Authorisation",
   "Authorization": "Authorization",
   "Authorization form": "Authorization form",
@@ -17,6 +19,9 @@
   },
   "Main page": "Main page",
   "Main page content": "Main page content",
+  "MainPage page": "MainPage page",
+  "MainPage page content": "MainPage page content",
+  "PROFILE PAGE": "PROFILE PAGE",
   "Page not found": "Page not found",
   "You have entered an incorrect login or password": "You have entered an incorrect login or password",
   "decrement": "decrement",

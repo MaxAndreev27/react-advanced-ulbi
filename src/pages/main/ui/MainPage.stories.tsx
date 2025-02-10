@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
-import About from './About';
+import MainPage from './MainPage';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
-const meta: Meta<typeof About> = {
-    title: 'pages/About',
-    component: About,
+const meta: Meta<typeof MainPage> = {
+    title: 'pages/MainPage',
+    component: MainPage,
     parameters: {
         // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
         // layout: 'centered',
@@ -20,7 +20,7 @@ const meta: Meta<typeof About> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof About>;
+type Story = StoryObj<typeof MainPage>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Normal: Story = {
