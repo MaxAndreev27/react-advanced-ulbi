@@ -1,35 +1,35 @@
 {
-    "About page content": "About page content",
-    "About us": "About us",
-    "Authorisation": "Authorisation",
-    "Authorization": "Authorization",
-    "Authorization form": "Authorization form",
-    "Enter": "Enter",
-    "Enter password": "Enter password",
-    "Enter username": "Enter username",
-    "Language": "Language",
-    "Login": "Login",
-    "Logout": "Logout",
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
-        " Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam": {
-            "": ""
-        }
-    },
-    "Main page": "Main page",
-    "Main page content": "Main page content",
-    "Page not found": "Page not found",
-    "You have entered an incorrect login or password": "You have entered an incorrect login or password",
-    "decrement": "decrement",
-    "increment": "increment",
-    "throw error": "throw error",
-    "Введите username": "Введите username",
-    "Введите пароль": "Введите пароль",
-    "Войти": "Войти",
-    "Вы ввели неверный логин или пароль": "Вы ввели неверный логин или пароль",
-    "Выйти": "Выйти",
-    "Главная": "Главная",
-    "О сайте": "О сайте",
-    "Обновить страницу": "Обновить страницу",
-    "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
-    "Форма авторизации": "Форма авторизации"
+  "About page content": "About page content",
+  "About us": "About us",
+  "Authorisation": "Authorisation",
+  "Authorization": "Authorization",
+  "Authorization form": "Authorization form",
+  "Enter": "Enter",
+  "Enter password": "Enter password",
+  "Enter username": "Enter username",
+  "Language": "Language",
+  "Login": "Login",
+  "Logout": "Logout",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
+    " Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam": {
+      "": ""
+    }
+  },
+  "Main page": "Main page",
+  "Main page content": "Main page content",
+  "Page not found": "Page not found",
+  "You have entered an incorrect login or password": "You have entered an incorrect login or password",
+  "decrement": "decrement",
+  "increment": "increment",
+  "throw error": "throw error",
+  "Введите username": "Введите username",
+  "Введите пароль": "Введите пароль",
+  "Войти": "Войти",
+  "Вы ввели неверный логин или пароль": "Вы ввели неверный логин или пароль",
+  "Выйти": "Выйти",
+  "Главная": "Главная",
+  "О сайте": "О сайте",
+  "Обновить страницу": "Обновить страницу",
+  "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
+  "Форма авторизации": "Форма авторизации"
 }
