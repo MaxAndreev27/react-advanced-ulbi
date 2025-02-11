@@ -53,6 +53,7 @@ export default [
                 ...globals.browser,
                 ...globals.jest,
                 __IS_DEV__: true,
+                __API__: true,
             },
 
             parser: tsParser,

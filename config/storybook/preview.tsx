@@ -16,13 +16,13 @@ const preview: Preview = {
     decorators: [
         (Story) => {
             return (
-                <StoreProvider>
-                    <BrowserRouter>
+                <BrowserRouter>
+                    <StoreProvider>
                         <ThemeProvider>
                             <Story />
                         </ThemeProvider>
-                    </BrowserRouter>
-                </StoreProvider>
+                    </StoreProvider>
+                </BrowserRouter>
             );
         },
     ],
