@@ -6,7 +6,7 @@ describe('Sidebar', () => {
     test('with only first param', () => {
         componentRender(<Sidebar />);
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
-        screen.debug();
+        // screen.debug();
     });
 
     test('test toggle', () => {
@@ -15,6 +15,6 @@ describe('Sidebar', () => {
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
         fireEvent.click(toggleBtn);
         expect(screen.getByTestId('sidebar')).toHaveClass('collapsed');
-        screen.debug();
+        // screen.debug();
     });
 });

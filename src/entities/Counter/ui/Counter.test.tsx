@@ -17,7 +17,7 @@ describe('Counter', () => {
         const incrementBtn = screen.getByTestId('increment-btn');
         fireEvent.click(incrementBtn);
         expect(screen.getByTestId('value-title')).toHaveTextContent('11');
-        screen.debug();
+        // screen.debug();
     });
 
     test('decrement', () => {
@@ -27,6 +27,6 @@ describe('Counter', () => {
         const decrementBtn = screen.getByTestId('decrement-btn');
         fireEvent.click(decrementBtn);
         expect(screen.getByTestId('value-title')).toHaveTextContent('9');
-        screen.debug();
+        // screen.debug();
     });
 });
