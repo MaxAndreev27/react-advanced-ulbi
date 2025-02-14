@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import LoginForm from './LoginForm';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
-import { ReducersMapObject } from '@reduxjs/toolkit';
 import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
+import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof LoginForm> = {
@@ -31,9 +31,9 @@ export const Primary: Story = {
     decorators: [
         (Story) => {
             const state: Partial<StateSchema> = {
-                loginForm: { username: '123', password: 'asd', isLoading: false },
+                loginForm: { username: 'admin', password: '123', isLoading: false },
             };
-            const defaultAsyncReducers: Partial<ReducersMapObject<StateSchema>> = {
+            const defaultAsyncReducers: ReducersList = {
                 loginForm: loginReducer,
             };
             return (
@@ -50,9 +50,14 @@ export const WithError: Story = {
     decorators: [
         (Story) => {
             const state: Partial<StateSchema> = {
-                loginForm: { username: '123', password: 'asd', isLoading: false, error: 'ERROR' },
+                loginForm: {
+                    username: 'admin',
+                    password: 'wrong',
+                    isLoading: false,
+                    error: 'ERROR',
+                },
             };
-            const defaultAsyncReducers: Partial<ReducersMapObject<StateSchema>> = {
+            const defaultAsyncReducers: ReducersList = {
                 loginForm: loginReducer,
             };
             return (
@@ -69,9 +74,9 @@ export const Loading: Story = {
     decorators: [
         (Story) => {
             const state: Partial<StateSchema> = {
-                loginForm: { username: '123', password: 'asd', isLoading: true },
+                loginForm: { username: 'admin', password: '123', isLoading: true },
             };
-            const defaultAsyncReducers: Partial<ReducersMapObject<StateSchema>> = {
+            const defaultAsyncReducers: ReducersList = {
                 loginForm: loginReducer,
             };
             return (

@@ -1,10 +1,11 @@
 import { CounterSchema } from 'entities/Counter';
 import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUsername';
-import { UnknownAction, EnhancedStore, Reducer, ReducersMapObject } from '@reduxjs/toolkit';
+import { EnhancedStore, Reducer, ReducersMapObject, UnknownAction } from '@reduxjs/toolkit';
 import { ProfileSchema } from 'entities/Profile';
 import { AxiosInstance } from 'axios';
-import { NavigateOptions, To } from 'react-router-dom';
+import { NavigateOptions } from 'react-router';
+import { To } from 'react-router-dom';
 
 export interface StateSchema {
     counter: CounterSchema;
@@ -14,11 +15,26 @@ export interface StateSchema {
     profile?: ProfileSchema;
 }
 
+export type StateSchemaForCombinedReducer =
+    | {
+          counter: CounterSchema;
+          user: UserSchema;
+          loginForm?: undefined;
+          profile?: undefined;
+      }
+    | Partial<{
+          counter: CounterSchema | undefined;
+          user: UserSchema | undefined;
+          loginForm?: undefined;
+          profile?: undefined;
+      }>
+    | undefined;
+
 export type StateSchemaKey = keyof StateSchema;
 
 export interface ReducerManager {
     getReducerMap: () => ReducersMapObject<StateSchema>;
-    reduce: (state: StateSchema, action: UnknownAction) => StateSchema;
+    reduce: Reducer<StateSchema, UnknownAction, any>;
     add: (key: StateSchemaKey, reducer: Reducer) => void;
     remove: (key: StateSchemaKey) => void;
 }

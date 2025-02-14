@@ -2,9 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
 import ProfilePage from 'pages/ProfilePage/ui/ProfilePage';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
-import { ReducersMapObject } from '@reduxjs/toolkit';
 import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
 import { profileReducer } from 'entities/Profile';
+import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof ProfilePage> = {
@@ -32,9 +32,9 @@ export const Normal: Story = {
     decorators: [
         (Story) => {
             const state: Partial<StateSchema> = {
-                loginForm: { username: '123', password: 'asd', isLoading: false },
+                loginForm: { username: 'admin', password: '123', isLoading: false },
             };
-            const defaultAsyncReducers: Partial<ReducersMapObject<StateSchema>> = {
+            const defaultAsyncReducers: ReducersList = {
                 loginForm: loginReducer,
                 profile: profileReducer,
             };
@@ -54,9 +54,9 @@ export const Dark: Story = {
     decorators: [
         (Story) => {
             const state: Partial<StateSchema> = {
-                loginForm: { username: '123', password: 'asd', isLoading: false },
+                loginForm: { username: 'admin', password: '123', isLoading: false },
             };
-            const defaultAsyncReducers: Partial<ReducersMapObject<StateSchema>> = {
+            const defaultAsyncReducers: ReducersList = {
                 loginForm: loginReducer,
                 profile: profileReducer,
             };
