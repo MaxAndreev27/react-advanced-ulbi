@@ -1,6 +1,12 @@
 {
     "Profile": "Профіль",
     "Edit": "Редагувати",
+    "An error occurred while loading the profile": "Під час завантаження профілю сталася помилка",
+    "Try reloading the page": "Спробуйте перезавантажити сторінку",
     "Your surname": "Ваше прізвище",
-    "Your name": "Ваше ім'я"
+    "Your name": "Ваше ім'я",
+    "Your age": "Ваш вік",
+    "City": "Місто",
+    "Enter username": "Ім'я користувача",
+    "Enter avatar link": "Посилання на аватар"
 }

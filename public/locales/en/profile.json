@@ -1,6 +1,12 @@
 {
     "Profile": "Profile",
     "Edit": "Edit",
+    "An error occurred while loading the profile": "An error occurred while loading the profile",
+    "Try reloading the page": "Try reloading the page",
     "Your surname": "Your surname",
-    "Your name": "Your name"
+    "Your name": "Your name",
+    "Your age": "Your age",
+    "City": "City",
+    "Enter username": "Enter username",
+    "Enter avatar link": "Enter avatar link"
 }
