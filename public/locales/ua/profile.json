@@ -1,6 +1,8 @@
 {
     "Profile": "Профіль",
     "Edit": "Редагувати",
+    "Cancel": "Відмінити",
+    "Save": "Зберегти",
     "An error occurred while loading the profile": "Під час завантаження профілю сталася помилка",
     "Try reloading the page": "Спробуйте перезавантажити сторінку",
     "Your surname": "Ваше прізвище",
@@ -8,5 +10,7 @@
     "Your age": "Ваш вік",
     "City": "Місто",
     "Enter username": "Ім'я користувача",
-    "Enter avatar link": "Посилання на аватар"
+    "Enter avatar link": "Посилання на аватар",
+    "Choose currency": "Виберіть валюту",
+    "Choose country": "Виберіть країну"
 }

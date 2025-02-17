@@ -1,6 +1,8 @@
 {
     "Profile": "Profile",
     "Edit": "Edit",
+    "Cancel": "Cancel",
+    "Save": "Save",
     "An error occurred while loading the profile": "An error occurred while loading the profile",
     "Try reloading the page": "Try reloading the page",
     "Your surname": "Your surname",
@@ -8,5 +10,7 @@
     "Your age": "Your age",
     "City": "City",
     "Enter username": "Enter username",
-    "Enter avatar link": "Enter avatar link"
+    "Enter avatar link": "Enter avatar link",
+    "Choose currency": "Choose currency",
+    "Choose country": "Choose country"
 }

@@ -34,7 +34,6 @@ function ProfilePageHeader(props: ProfilePageHeaderProps) {
         <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
             <div className={cls.header}>
                 <Text title={t('Profile')} />
-
                 {readonly ? (
                     <Button className={cls.editBtn} theme={ButtonTheme.OUTLINE} onClick={onEdit}>
                         {t('Edit')}

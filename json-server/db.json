@@ -28,8 +28,8 @@
     "profile": {
         "first": "John",
         "lastname": "Doe",
-        "age": 424,
-        "currency": "UAH",
+        "age": 111,
+        "currency": "EUR",
         "country": "Ukraine",
         "city": "Kharkiv",
         "username": "admin",
