@@ -2,9 +2,11 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
 import ProfilePage from 'pages/ProfilePage/ui/ProfilePage';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
-import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
 import { profileReducer } from 'entities/Profile';
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { Country } from 'entities/Country';
+import { Currency } from 'entities/Currency';
+import avatar from 'shared/assets/tests/storybook.jpg';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof ProfilePage> = {
@@ -32,10 +34,22 @@ export const Normal: Story = {
     decorators: [
         (Story) => {
             const state: Partial<StateSchema> = {
-                loginForm: { username: 'admin', password: '123', isLoading: false },
+                profile: {
+                    form: {
+                        username: 'admin',
+                        age: 22,
+                        country: Country.Ukraine,
+                        lastname: 'ulbi tv',
+                        first: 'asd',
+                        city: 'asf',
+                        currency: Currency.USD,
+                        avatar,
+                    },
+                    isLoading: false,
+                    readonly: true,
+                },
             };
             const defaultAsyncReducers: ReducersList = {
-                loginForm: loginReducer,
                 profile: profileReducer,
             };
             return (
@@ -54,10 +68,22 @@ export const Dark: Story = {
     decorators: [
         (Story) => {
             const state: Partial<StateSchema> = {
-                loginForm: { username: 'admin', password: '123', isLoading: false },
+                profile: {
+                    form: {
+                        username: 'admin',
+                        age: 22,
+                        country: Country.Ukraine,
+                        lastname: 'ulbi tv',
+                        first: 'asd',
+                        city: 'asf',
+                        currency: Currency.USD,
+                        avatar,
+                    },
+                    isLoading: false,
+                    readonly: true,
+                },
             };
             const defaultAsyncReducers: ReducersList = {
-                loginForm: loginReducer,
                 profile: profileReducer,
             };
             return (

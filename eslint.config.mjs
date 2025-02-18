@@ -54,6 +54,7 @@ export default [
                 ...globals.jest,
                 __IS_DEV__: true,
                 __API__: true,
+                __PROJECT__: true,
             },
 
             parser: tsParser,

@@ -58,7 +58,9 @@ export const AuthNavbar: Story = {
             };
             return (
                 <StoreProvider initialState={state}>
-                    <Story />
+                    <div className={`app ${Theme.LIGHT}`}>
+                        <Story />
+                    </div>
                 </StoreProvider>
             );
         },

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
 import { Sidebar } from './Sidebar';
+import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof Sidebar> = {
@@ -27,21 +28,57 @@ type Story = StoryObj<typeof Sidebar>;
 export const Light: Story = {
     args: {},
     decorators: [
-        (Story) => (
-            <div className={`app ${Theme.LIGHT}`}>
-                <Story />
-            </div>
-        ),
+        (Story) => {
+            const state: Partial<StateSchema> = {
+                user: {
+                    authData: { id: '1', username: 'admin' },
+                },
+            };
+            return (
+                <StoreProvider initialState={state}>
+                    <div className={`app ${Theme.LIGHT}`}>
+                        <Story />
+                    </div>
+                </StoreProvider>
+            );
+        },
     ],
 };
 
 export const Dark: Story = {
     args: {},
     decorators: [
-        (Story) => (
-            <div className={`app ${Theme.DARK}`}>
-                <Story />
-            </div>
-        ),
+        (Story) => {
+            const state: Partial<StateSchema> = {
+                user: {
+                    authData: { id: '1', username: 'admin' },
+                },
+            };
+            return (
+                <StoreProvider initialState={state}>
+                    <div className={`app ${Theme.DARK}`}>
+                        <Story />
+                    </div>
+                </StoreProvider>
+            );
+        },
+    ],
+};
+
+export const NoAuthSidebar: Story = {
+    args: {},
+    decorators: [
+        (Story) => {
+            const state: Partial<StateSchema> = {
+                user: {},
+            };
+            return (
+                <StoreProvider initialState={state}>
+                    <div className={`app ${Theme.LIGHT}`}>
+                        <Story />
+                    </div>
+                </StoreProvider>
+            );
+        },
     ],
 };
