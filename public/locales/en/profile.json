@@ -12,5 +12,10 @@
     "Enter username": "Enter username",
     "Enter avatar link": "Enter avatar link",
     "Choose currency": "Choose currency",
-    "Choose country": "Choose country"
+    "Choose country": "Choose country",
+    "Server error while saving": "Server error while saving",
+    "Incorrect region": "Incorrect region",
+    "No data": "No data",
+    "Incorrect userdata": "Incorrect userdata",
+    "Incorrect age": "Incorrect age"
 }
