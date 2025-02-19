@@ -54,6 +54,7 @@ export const AuthNavbar: Story = {
             const state: Partial<StateSchema> = {
                 user: {
                     authData: { id: '1', username: 'admin' },
+                    _inited: true,
                 },
             };
             return (

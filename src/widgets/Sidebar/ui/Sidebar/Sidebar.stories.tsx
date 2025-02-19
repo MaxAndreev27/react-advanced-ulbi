@@ -32,6 +32,7 @@ export const Light: Story = {
             const state: Partial<StateSchema> = {
                 user: {
                     authData: { id: '1', username: 'admin' },
+                    _inited: true,
                 },
             };
             return (
@@ -52,6 +53,7 @@ export const Dark: Story = {
             const state: Partial<StateSchema> = {
                 user: {
                     authData: { id: '1', username: 'admin' },
+                    _inited: true,
                 },
             };
             return (
@@ -70,7 +72,7 @@ export const NoAuthSidebar: Story = {
     decorators: [
         (Story) => {
             const state: Partial<StateSchema> = {
-                user: {},
+                user: { _inited: false },
             };
             return (
                 <StoreProvider initialState={state}>
