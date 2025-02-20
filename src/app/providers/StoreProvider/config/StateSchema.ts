@@ -6,6 +6,7 @@ import { ProfileSchema } from 'entities/Profile';
 import { AxiosInstance } from 'axios';
 import { NavigateOptions } from 'react-router';
 import { To } from 'react-router-dom';
+import { ArticleDetailsSchema } from 'entities/Article';
 
 export interface StateSchema {
     counter: CounterSchema;
@@ -13,6 +14,7 @@ export interface StateSchema {
     // Асинхронные редюсеры
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
+    articleDetails?: ArticleDetailsSchema;
 }
 
 export type StateSchemaForCombinedReducer =
@@ -21,12 +23,14 @@ export type StateSchemaForCombinedReducer =
           user: UserSchema;
           loginForm?: undefined;
           profile?: undefined;
+          articleDetails?: undefined;
       }
     | Partial<{
           counter: CounterSchema | undefined;
           user: UserSchema | undefined;
           loginForm?: undefined;
           profile?: undefined;
+          articleDetails?: undefined;
       }>
     | undefined;
 
