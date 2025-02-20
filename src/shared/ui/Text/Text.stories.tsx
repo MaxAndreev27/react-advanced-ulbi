@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Text, TextTheme } from './Text';
+import { Text, TextSize, TextTheme } from './Text';
 import { Theme } from 'app/providers/ThemeProvider';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
@@ -113,6 +113,21 @@ export const OnlyTextDark: Story = {
     decorators: [
         (Story) => (
             <div className={`app ${Theme.DARK}`}>
+                <Story />
+            </div>
+        ),
+    ],
+};
+
+export const SizeL: Story = {
+    args: {
+        title: 'Title lorem ipsun',
+        text: 'Description Description Description Description',
+        size: TextSize.L,
+    },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.ORANGE}`}>
                 <Story />
             </div>
         ),

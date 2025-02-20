@@ -81,3 +81,32 @@ export const CircleDark: Story = {
         ),
     ],
 };
+
+export const NormalOrange: Story = {
+    args: {
+        width: '100%',
+        height: 200,
+    },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.ORANGE}`}>
+                <Story />
+            </div>
+        ),
+    ],
+};
+
+export const CircleOrange: Story = {
+    args: {
+        border: '50%',
+        width: 100,
+        height: 100,
+    },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.ORANGE}`}>
+                <Story />
+            </div>
+        ),
+    ],
+};

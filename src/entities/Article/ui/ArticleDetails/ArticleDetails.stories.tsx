@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
-import ArticleDetailsPage from './ArticleDetailsPage';
+import { ArticleDetails } from './ArticleDetails';
 import { Article } from 'entities/Article';
 import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
@@ -8,9 +8,9 @@ import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicM
 import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
-const meta: Meta<typeof ArticleDetailsPage> = {
-    title: 'pages/ArticleDetailsPage',
-    component: ArticleDetailsPage,
+const meta: Meta<typeof ArticleDetails> = {
+    title: 'entities/ArticleDetails',
+    component: ArticleDetails,
     parameters: {
         // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
         // layout: 'centered',
@@ -25,7 +25,7 @@ const meta: Meta<typeof ArticleDetailsPage> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof ArticleDetailsPage>;
+type Story = StoryObj<typeof ArticleDetails>;
 
 const article: Article = {
     id: '1',
@@ -72,6 +72,53 @@ export const Normal: Story = {
                 articleDetails: {
                     data: article,
                     isLoading: false,
+                },
+            };
+            const defaultAsyncReducers: ReducersList = {
+                articleDetails: articleDetailsReducer,
+            };
+            return (
+                <StoreProvider initialState={state} asyncReducers={{ ...defaultAsyncReducers }}>
+                    <div className={`app ${Theme.LIGHT}`}>
+                        <Story />
+                    </div>
+                </StoreProvider>
+            );
+        },
+    ],
+};
+
+export const Loading: Story = {
+    args: {},
+    decorators: [
+        (Story) => {
+            const state: Partial<StateSchema> = {
+                articleDetails: {
+                    isLoading: true,
+                },
+            };
+            const defaultAsyncReducers: ReducersList = {
+                articleDetails: articleDetailsReducer,
+            };
+            return (
+                <StoreProvider initialState={state} asyncReducers={{ ...defaultAsyncReducers }}>
+                    <div className={`app ${Theme.LIGHT}`}>
+                        <Story />
+                    </div>
+                </StoreProvider>
+            );
+        },
+    ],
+};
+
+export const Error: Story = {
+    args: {},
+    decorators: [
+        (Story) => {
+            const state: Partial<StateSchema> = {
+                articleDetails: {
+                    isLoading: false,
+                    error: 'error',
                 },
             };
             const defaultAsyncReducers: ReducersList = {
