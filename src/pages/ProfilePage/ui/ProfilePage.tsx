@@ -16,7 +16,7 @@ import {
     ValidateProfileError,
 } from 'entities/Profile';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import ProfilePageHeader from './ProfilePageHeader/ProfilePageHeader';
 import { Currency } from 'entities/Currency';
