@@ -9,5 +9,7 @@
     "Logout": "Вийти",
     "Authorization form": "Форма авторизації",
     "You have entered an incorrect login or password": "Ви ввели неправильний логін або пароль",
-    "No comments": "Немає коментарів"
+    "No comments": "Немає коментарів",
+    "Enter comment text": "Введіть текст комментарія",
+    "Send": "Відправити"
 }
