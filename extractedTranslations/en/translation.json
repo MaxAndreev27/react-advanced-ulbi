@@ -1,13 +1,8 @@
 {
   "About page content": "About page content",
-  "About us": "About us",
-  "AboutPage page content": "AboutPage page content",
-  "AboutPage us": "AboutPage us",
-  "An error occurred while loading the profile": "An error occurred while loading the profile",
   "Article not found": "Article not found",
-  "Authorisation": "Authorisation",
-  "Authorization": "Authorization",
   "Authorization form": "Authorization form",
+  "Back to the list": "Back to the list",
   "Cancel": "Cancel",
   "Choose country": "Choose country",
   "Choose currency": "Choose currency",
@@ -22,27 +17,16 @@
   "Incorrect age": "Incorrect age",
   "Incorrect region": "Incorrect region",
   "Incorrect userdata": "Incorrect userdata",
-  "Language": "Language",
   "Login": "Login",
   "Logout": "Logout",
-  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
-    " Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam": {
-      "": ""
-    }
-  },
-  "Main page": "Main page",
   "Main page content": "Main page content",
-  "MainPage page": "MainPage page",
-  "MainPage page content": "MainPage page content",
   "No comments": "No comments",
   "No data": "No data",
-  "PROFILE PAGE": "PROFILE PAGE",
   "Page not found": "Page not found",
   "Profile": "Profile",
   "Save": "Save",
   "Send": "Send",
   "Server error while saving": "Server error while saving",
-  "Try reloading the page": "Try reloading the page",
   "You have entered an incorrect login or password": "You have entered an incorrect login or password",
   "Your age": "Your age",
   "Your name": "Your name",
@@ -50,34 +34,19 @@
   "decrement": "decrement",
   "increment": "increment",
   "throw error": "throw error",
-  "Ваш возраст": "Ваш возраст",
-  "Ваша фамилия": "Ваша фамилия",
-  "Ваше имя": "Ваше имя",
-  "Введите username": "Введите username",
-  "Введите имя пользователя": "Введите имя пользователя",
-  "Введите пароль": "Введите пароль",
-  "Введите ссылку на аватар": "Введите ссылку на аватар",
-  "Войти": "Войти",
-  "Вы ввели неверный логин или пароль": "Вы ввели неверный логин или пароль",
-  "Выйти": "Выйти",
-  "Главная": "Главная",
-  "Город": "Город",
-  "Данные не указаны": "Данные не указаны",
-  "Имя и фамилия обязательны": "Имя и фамилия обязательны",
-  "Комментарии отсутствуют": "Комментарии отсутствуют",
-  "Некорректный возраст": "Некорректный возраст",
-  "Некорректный регион": "Некорректный регион",
-  "О сайте": "О сайте",
+  "Назад к списку": "Назад к списку",
   "Обновить страницу": "Обновить страницу",
-  "Отменить": "Отменить",
   "Попробуйте обновить страницу": "Попробуйте обновить страницу",
   "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
   "Произошла ошибка при загрузке профиля": "Произошла ошибка при загрузке профиля",
   "Произошла ошибка при загрузке статьи": {
     "": ""
   },
-  "Серверная ошибка при сохранении": "Серверная ошибка при сохранении",
-  "Сохранить": "Сохранить",
-  "Статья не найдена": "Статья не найдена",
-  "Форма авторизации": "Форма авторизации"
+  "Читать далее": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  }
 }
