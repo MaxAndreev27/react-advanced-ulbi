@@ -222,7 +222,6 @@
                 }
             ]
         },
-
         {
             "id": "4",
             "title": "Javascript news2",
@@ -433,7 +432,6 @@
                 }
             ]
         },
-
         {
             "id": "7",
             "title": "Javascript news3",
@@ -644,7 +642,6 @@
                 }
             ]
         },
-
         {
             "id": "10",
             "title": "Javascript news4",
@@ -855,7 +852,6 @@
                 }
             ]
         },
-
         {
             "id": "13",
             "title": "Javascript news5",
@@ -1103,6 +1099,12 @@
             "userId": "1",
             "text": "another comment",
             "id": "-25oU0S"
+        },
+        {
+            "articleId": "2",
+            "userId": "2",
+            "text": "Стаття 2 тест коммент",
+            "id": "tJhzzt8"
         }
     ],
     "users": [
