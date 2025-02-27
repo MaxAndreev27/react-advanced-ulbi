@@ -2,7 +2,6 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { User, userActions } from 'entities/User';
 import { USER_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
 import { ThunkConfig } from 'app/providers/StoreProvider';
-import { useNavigate } from 'react-router-dom';
 
 interface LoginByUsernameProps {
     username: string;
