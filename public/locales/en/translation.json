@@ -11,5 +11,17 @@
     "You have entered an incorrect login or password": "You have entered an incorrect login or password",
     "No comments": "No comments",
     "Enter comment text": "Enter comment text",
-    "Send": "Send"
+    "Send": "Send",
+    "Increase": "Increase",
+    "Decrease": "Decrease",
+    "Date": "Date",
+    "Title": "Title",
+    "Review": "Review",
+    "Sort": "Sort",
+    "By": "By",
+    "All": "All",
+    "IT": "IT",
+    "Economy": "Economy",
+    "Science": "Science",
+    "Search": "Search"
 }

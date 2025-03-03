@@ -1,13 +1,16 @@
 import { createEntityAdapter, createSlice, PayloadAction } from '@reduxjs/toolkit';
+
 import { Comment } from 'entities/Comment';
 import { StateSchema } from 'app/providers/StoreProvider';
-import { fetchCommentsByArticleId } from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { ArticleDetailsCommentsSchema } from '../types/ArticleDetailsCommentsSchema';
 
-const commentsAdapter = createEntityAdapter<Comment, string>({ selectId: (comment) => comment.id });
+const commentsAdapter = createEntityAdapter<Comment, string>({
+    selectId: (comment) => comment.id,
+});
 
 export const getArticleComments = commentsAdapter.getSelectors<StateSchema>(
-    (state) => state.articleDetailsComments || commentsAdapter.getInitialState(),
+    (state) => state.articleDetailsPage?.comments || commentsAdapter.getInitialState(),
 );
 
 const articleDetailsCommentsSlice = createSlice({
@@ -17,12 +20,6 @@ const articleDetailsCommentsSlice = createSlice({
         error: undefined,
         ids: [],
         entities: {},
-        // ids: ['1', '2', '3'],
-        // entities: {
-        //     1: { id: '1', text: 'some comment 1', user: { id: '1', username: 'adm' } },
-        //     2: { id: '2', text: 'some comment 2', user: { id: '1', username: 'adm' } },
-        //     3: { id: '3', text: 'some comment 3', user: { id: '1', username: 'adm' } },
-        // },
     }),
     reducers: {},
     extraReducers: (builder) => {

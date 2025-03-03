@@ -557,6 +557,18 @@
             "userId": "1",
             "text": "python!!!",
             "id": "p5rMadd"
+        },
+        {
+            "articleId": "7",
+            "userId": "2",
+            "text": "Новий",
+            "id": "JxpMGBY"
+        },
+        {
+            "articleId": "7",
+            "userId": "2",
+            "text": "еще коммент",
+            "id": "rF_L96C"
         }
     ],
     "users": [

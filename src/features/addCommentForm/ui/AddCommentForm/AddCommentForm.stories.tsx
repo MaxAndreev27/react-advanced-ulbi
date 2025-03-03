@@ -45,7 +45,7 @@ export const Primary: Story = {
                 profile: profileReducer,
                 articleDetails: articleDetailsReducer,
                 addCommentForm: addCommentFormReducer,
-                articleDetailsComments: articleDetailsCommentsReducer,
+                articleDetailsPage: articleDetailsCommentsReducer,
             };
             return (
                 <StoreProvider initialState={state} asyncReducers={{ ...defaultAsyncReducers }}>

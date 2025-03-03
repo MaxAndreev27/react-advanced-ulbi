@@ -11,5 +11,17 @@
     "You have entered an incorrect login or password": "Ви ввели неправильний логін або пароль",
     "No comments": "Немає коментарів",
     "Enter comment text": "Введіть текст комментарія",
-    "Send": "Відправити"
+    "Send": "Відправити",
+    "Increase": "Зростанню",
+    "Decrease": "Спадання",
+    "Date": "Дата",
+    "Title": "Назва",
+    "Review": "Перегляди",
+    "Sort": "Сортувати",
+    "By": "За",
+    "All": "Всі",
+    "IT": "IT",
+    "Economy": "Економія",
+    "Science": "Наука",
+    "Search": "Знайти"
 }
