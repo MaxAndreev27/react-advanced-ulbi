@@ -5,11 +5,7 @@ import { EnhancedStore, Reducer, ReducersMapObject, UnknownAction } from '@redux
 import { ProfileSchema } from 'entities/Profile';
 import { AxiosInstance } from 'axios';
 import { ArticleDetailsSchema } from 'entities/Article';
-import {
-    ArticleDetailsCommentsSchema,
-    ArticleDetailsPageSchema,
-    ArticleDetailsRecommendationsSchema,
-} from 'pages/ArticleDetailsPage';
+import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from 'features/addCommentForm';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
 import { UISchema } from 'features/UI';
