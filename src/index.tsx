@@ -12,11 +12,11 @@ const root = createRoot(domNode);
 root.render(
     <BrowserRouter>
         <StoreProvider>
-            <ErrorBoundary>
-                <ThemeProvider>
-                    <App />
-                </ThemeProvider>
-            </ErrorBoundary>
+            {/*<ErrorBoundary>*/}
+            <ThemeProvider>
+                <App />
+            </ThemeProvider>
+            {/*</ErrorBoundary>*/}
         </StoreProvider>
     </BrowserRouter>,
 );
