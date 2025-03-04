@@ -5,7 +5,7 @@
     "scripts": {
         "start": "webpack serve --open --env port=3000",
         "start:dev": "concurrently \"npm start\" \"npm run start:back:server\"",
-        "build:prod": "webpack --env mode=production apiUrl=https://react-advanced-ulbi-backend-4zh8xhlj1-maxs-projects-e6c37e91.vercel.app",
+        "build:prod": "webpack --env mode=production apiUrl=https://react-advanced-ulbi-backend.vercel.app",
         "build:dev": "webpack --env mode=development",
         "start:back:server": "node ./json-server/index.js",
         "start:back:db": "npx json-server ./json-server/db.json --port 8000",
