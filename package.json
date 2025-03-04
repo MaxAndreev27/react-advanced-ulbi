@@ -5,7 +5,7 @@
     "scripts": {
         "start": "webpack serve --open --env port=3000",
         "start:dev": "concurrently \"npm start\" \"npm run start:back:server\"",
-        "build:prod": "webpack --env mode=production",
+        "build:prod": "webpack --env mode=production apiUrl=https://react-advanced-ulbi-backend-4zh8xhlj1-maxs-projects-e6c37e91.vercel.app",
         "build:dev": "webpack --env mode=development",
         "start:back:server": "node ./json-server/index.js",
         "start:back:db": "npx json-server ./json-server/db.json --port 8000",
@@ -61,6 +61,7 @@
         "@typescript-eslint/parser": "^8.21.0",
         "babel-loader": "^9.2.1",
         "babel-plugin-i18next-extract": "^1.0.0",
+        "copy-webpack-plugin": "^13.0.0",
         "css-loader": "^6.6.0",
         "eslint": "^9.18.0",
         "eslint-config-prettier": "^10.0.1",
