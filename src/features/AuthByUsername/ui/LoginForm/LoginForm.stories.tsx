@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import LoginForm from './LoginForm';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
-import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
+import { loginReducer } from '../../model/slice/loginSlice';
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export

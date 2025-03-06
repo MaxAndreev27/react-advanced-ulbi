@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
-import ProfilePage from 'pages/ProfilePage/ui/ProfilePage';
+import ProfilePage from './ProfilePage';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 import { profileReducer } from 'entities/Profile';
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';

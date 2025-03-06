@@ -9,6 +9,7 @@ import js from '@eslint/js';
 import { FlatCompat } from '@eslint/eslintrc';
 import reactHooks from 'eslint-plugin-react-hooks';
 import eslintConfigPrettier from 'eslint-config-prettier';
+import Index from 'eslint-plugin-future-slice';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -46,6 +47,7 @@ export default [
             '@typescript-eslint': typescriptEslint,
             i18next: i18Next,
             'react-hooks': reactHooks,
+            'future-slice': Index,
         },
 
         languageOptions: {
@@ -107,6 +109,7 @@ export default [
             'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
             'no-param-reassign': 'off',
             'no-undef': 'off',
+            'future-slice/path-checker': 'error',
         },
     },
     {
