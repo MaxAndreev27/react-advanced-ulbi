@@ -119,6 +119,36 @@ export const OnlyTextDark: Story = {
     ],
 };
 
+export const SizeS: Story = {
+    args: {
+        title: 'Title lorem ipsun',
+        text: 'Description Description Description Description',
+        size: TextSize.S,
+    },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.ORANGE}`}>
+                <Story />
+            </div>
+        ),
+    ],
+};
+
+export const SizeM: Story = {
+    args: {
+        title: 'Title lorem ipsun',
+        text: 'Description Description Description Description',
+        size: TextSize.M,
+    },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.ORANGE}`}>
+                <Story />
+            </div>
+        ),
+    ],
+};
+
 export const SizeL: Story = {
     args: {
         title: 'Title lorem ipsun',
