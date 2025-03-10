@@ -18,6 +18,13 @@ const meta: Meta<typeof ListBox> = {
     },
     // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
     // args: { onClick: fn() },
+    decorators: [
+        (Story) => (
+            <div style={{ padding: 100 }}>
+                <Story />
+            </div>
+        ),
+    ],
 };
 
 export default meta;
@@ -26,13 +33,82 @@ type Story = StoryObj<typeof ListBox>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
     args: {
-        label: 'Укажите значение',
-        value: '1',
+        value: '123',
         items: [
-            { value: '1', content: '1' },
-            { value: '2', content: '2' },
-            { value: '3', content: '3', disabled: true },
-            { value: '4', content: '4' },
+            { content: '1asfasfasf23', value: '123' },
+            { content: '1asfasfasf21233', value: '1232' },
+        ],
+    },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story />
+            </div>
+        ),
+    ],
+};
+
+export const TopLeft: Story = {
+    args: {
+        direction: 'top left',
+        value: '123',
+        items: [
+            { content: '1asfasfasf23', value: '123' },
+            { content: '1asfasfasf21233', value: '1232' },
+        ],
+    },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story />
+            </div>
+        ),
+    ],
+};
+
+export const TopRight: Story = {
+    args: {
+        direction: 'top right',
+        value: '123',
+        items: [
+            { content: '1asfasfasf23', value: '123' },
+            { content: '1asfasfasf21233', value: '1232' },
+        ],
+    },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story />
+            </div>
+        ),
+    ],
+};
+
+export const BottomLeft: Story = {
+    args: {
+        direction: 'bottom left',
+        value: '123',
+        items: [
+            { content: '1asfasfasf23', value: '123' },
+            { content: '1asfasfasf21233', value: '1232' },
+        ],
+    },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story />
+            </div>
+        ),
+    ],
+};
+
+export const BottomRight: Story = {
+    args: {
+        direction: 'bottom right',
+        value: '123',
+        items: [
+            { content: '1asfasfasf23', value: '123' },
+            { content: '1asfasfasf21233', value: '1232' },
         ],
     },
     decorators: [
