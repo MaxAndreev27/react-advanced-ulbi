@@ -66,10 +66,10 @@
         "css-loader": "^6.6.0",
         "eslint": "^9.18.0",
         "eslint-config-prettier": "^10.0.1",
+        "eslint-plugin-future-slice": "^0.0.1",
         "eslint-plugin-i18next": "^6.1.1",
         "eslint-plugin-react": "^7.37.4",
         "eslint-plugin-react-hooks": "^5.1.0",
-        "eslint-plugin-future-slice": "^0.0.1",
         "eslint-plugin-storybook": "^0.11.2",
         "file-loader": "^6.2.0",
         "globals": "^15.14.0",
@@ -99,6 +99,7 @@
         "webpack-dev-server": "^5.2.0"
     },
     "dependencies": {
+        "@headlessui/react": "^2.2.0",
         "@reduxjs/toolkit": "^2.5.1",
         "axios": "^1.7.9",
         "concurrently": "^9.1.2",

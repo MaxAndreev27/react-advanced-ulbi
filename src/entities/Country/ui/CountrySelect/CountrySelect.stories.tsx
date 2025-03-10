@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { CountrySelect } from './CountrySelect';
 import { Theme } from 'app/providers/ThemeProvider';
+import { Country } from '../../model/types/country';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof CountrySelect> = {
@@ -25,7 +26,7 @@ type Story = StoryObj<typeof CountrySelect>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
-    args: { label: 'Choose country' },
+    args: { value: Country.Armenia },
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
@@ -36,7 +37,7 @@ export const Primary: Story = {
 };
 
 export const Dark: Story = {
-    args: { label: 'Choose country' },
+    args: { value: Country.Ukraine },
     decorators: [
         (Story) => (
             <div className={`app ${Theme.DARK}`}>

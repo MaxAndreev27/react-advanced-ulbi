@@ -128,14 +128,12 @@ export const ProfileCard = (props: ProfileCardProps) => {
             />
             <CurrencySelect
                 className={cls.input}
-                label={t('Choose currency')}
                 value={data?.currency}
                 onChange={onChangeCurrency}
                 readonly={readonly}
             />
             <CountrySelect
                 className={cls.input}
-                label={t('Choose country')}
                 value={data?.country}
                 onChange={onChangeCountry}
                 readonly={readonly}
