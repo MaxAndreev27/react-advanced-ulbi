@@ -25,6 +25,7 @@ import {
     getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
 import { articlesPageActions } from '../../model/slices/articlesPageSlice';
+import { VStack } from 'shared/ui/Stack';
 
 interface ArticlesPageFiltersProps {
     className?: string;

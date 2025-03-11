@@ -17,5 +17,6 @@
     "Incorrect region": "Некоректний регіон",
     "No data": "Дані не вказані",
     "Incorrect userdata": "Треба вказати ім'я та прізвище",
-    "Incorrect age": "Треба вказати вік"
+    "Incorrect age": "Треба вказати вік",
+    "Profile not found": "Профіль не знайдений"
 }

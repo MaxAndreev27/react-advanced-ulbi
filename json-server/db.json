@@ -575,6 +575,12 @@
             "userId": "1",
             "text": "123",
             "id": "dOGwA0z"
+        },
+        {
+            "articleId": "7",
+            "userId": "1",
+            "text": "11.03.2025 19:05",
+            "id": "o7KWlnq"
         }
     ],
     "users": [
@@ -596,8 +602,8 @@
     "profile": [
         {
             "id": "1",
-            "first": "jghwer",
-            "lastname": "asfewr",
+            "first": "aaa",
+            "lastname": "bbb",
             "age": 465,
             "currency": "RUB",
             "country": "Belarus",

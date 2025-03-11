@@ -28,7 +28,9 @@
     "Edit": "Редагувати",
     "Back to the list": "Назад до списку",
     "New article": "Нова стаття",
+    "Edit article with ID = ": "Редагування статті з ID = ",
     "Articles not found": "Статті не знайдені",
+    "Error articles loading": "Помилка при завантаженні статей",
     "Select country": "Виберіть країну",
     "Select currency": "Виберіть валюту"
 }

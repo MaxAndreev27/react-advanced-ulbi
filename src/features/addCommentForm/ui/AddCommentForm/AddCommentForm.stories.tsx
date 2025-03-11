@@ -5,9 +5,9 @@ import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { action } from '@storybook/addon-actions';
 import { addCommentFormReducer } from '../../model/slices/addCommentFormSlice';
-import { profileReducer } from 'entities/Profile';
 import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice';
 import { articleDetailsCommentsReducer } from 'pages/ArticleDetailsPage/model/slices/articleDetailsCommentsSlice';
+import { profileReducer } from 'features/editableProfileCard/model/slice/profileSlice';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof AddCommentForm> = {

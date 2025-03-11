@@ -28,7 +28,9 @@
     "Edit": "Edit",
     "Back to the list": "Back to the list",
     "New article": "New article",
+    "Edit article with ID = ": "Edit article with ID = ",
     "Articles not found": "Articles not found",
+    "Error articles loading": "Error articles loading",
     "Select country": "Select country",
     "Select currency": "Select currency"
 }
