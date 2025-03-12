@@ -58,3 +58,6 @@ testem.log
 .DS_Store
 Thumbs.db
 *storybook.log
+
+# Jest-html-reporters
+/reports
