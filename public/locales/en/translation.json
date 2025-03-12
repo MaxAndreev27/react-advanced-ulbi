@@ -32,5 +32,7 @@
     "Articles not found": "Articles not found",
     "Error articles loading": "Error articles loading",
     "Select country": "Select country",
-    "Select currency": "Select currency"
+    "Select currency": "Select currency",
+    "An unexpected error occurred": "An unexpected error occurred",
+    "Refresh page": "Refresh page"
 }

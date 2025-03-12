@@ -32,5 +32,7 @@
     "Articles not found": "Статті не знайдені",
     "Error articles loading": "Помилка при завантаженні статей",
     "Select country": "Виберіть країну",
-    "Select currency": "Виберіть валюту"
+    "Select currency": "Виберіть валюту",
+    "An unexpected error occurred": "Сталася непердбачувана помилка",
+    "Refresh page": "Оновити сторінку"
 }

@@ -65,8 +65,8 @@ export const ProfileCard = (props: ProfileCardProps) => {
             >
                 <Text
                     theme={TextTheme.ERROR}
-                    title={t('Произошла ошибка при загрузке профиля')}
-                    text={t('Попробуйте обновить страницу')}
+                    title={t('An error occurred while loading the profile')}
+                    text={t('Try reloading the page')}
                     align={TextAlign.CENTER}
                 />
             </HStack>
