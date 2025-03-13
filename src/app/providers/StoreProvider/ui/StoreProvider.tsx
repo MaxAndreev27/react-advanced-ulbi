@@ -3,12 +3,11 @@ import { Provider } from 'react-redux';
 import { createReduxStore } from 'app/providers/StoreProvider/config/store';
 import { StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
 import { ReducersMapObject } from '@reduxjs/toolkit';
-import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 interface StoreProviderProps {
     children?: ReactNode;
-    initialState?: Partial<StateSchema>;
-    asyncReducers?: ReducersList;
+    initialState?: DeepPartial<StateSchema>;
+    asyncReducers?: DeepPartial<ReducersMapObject<StateSchema>>;
 }
 
 export const StoreProvider = (props: StoreProviderProps) => {
@@ -18,6 +17,8 @@ export const StoreProvider = (props: StoreProviderProps) => {
         initialState as StateSchema,
         asyncReducers as ReducersMapObject<StateSchema>,
     );
+
+    // console.log('RENDER!!!');
 
     return <Provider store={store}>{children}</Provider>;
 };
