@@ -34,5 +34,7 @@
     "Select country": "Select country",
     "Select currency": "Select currency",
     "An unexpected error occurred": "An unexpected error occurred",
-    "Refresh page": "Refresh page"
+    "Refresh page": "Refresh page",
+    "Adminpanel": "Adminpanel",
+    "You do not have access to this page": "You do not have access to this page"
 }

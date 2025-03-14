@@ -34,5 +34,7 @@
     "Select country": "Виберіть країну",
     "Select currency": "Виберіть валюту",
     "An unexpected error occurred": "Сталася непердбачувана помилка",
-    "Refresh page": "Оновити сторінку"
+    "Refresh page": "Оновити сторінку",
+    "Adminpanel": "Адмінка",
+    "You do not have access to this page": "У вас немає доступу до цієї сторінки"
 }

@@ -588,14 +588,14 @@
             "id": "1",
             "username": "admin",
             "password": "123",
-            "role": "ADMIN",
+            "roles": ["ADMIN"],
             "avatar": "https://image.api.playstation.com/vulcan/img/cfn/113079XRqKze-XG5C66saw2iu5NzZBKKc74WSsi37VWopNYI4BstfGjUdc7bn__iGGvgJjZXHFx7T4P7QHoYtiLVxlYgjFp_.png"
         },
         {
             "id": "2",
             "username": "user",
             "password": "123",
-            "role": "USER",
+            "roles": ["USER"],
             "avatar": "https://www.creativefabrica.com/wp-content/uploads/2022/09/17/Hacker-wear-hoodie-using-computer-avatar-Graphics-38698062-1.jpg"
         }
     ],
