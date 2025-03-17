@@ -62,10 +62,6 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                               ]
                             : []),
                         {
-                            content: `Adminpanel: ${isAdminPanelAvailable}`,
-                            href: RoutePath.admin_panel,
-                        },
-                        {
                             content: t('Profile'),
                             href: RoutePath.profile + authData.id,
                         },
