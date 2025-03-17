@@ -3,7 +3,7 @@ import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { loginByUsername } from './loginByUsername';
 
 // jest.mock('axios');
-// const mockedAxios = jest.mocked(axios, { shallow: true });
+// consts mockedAxios = jest.mocked(axios, { shallow: true });
 
 describe('loginByUsername.test', () => {
     // let dispatch: Dispatch;
@@ -15,10 +15,10 @@ describe('loginByUsername.test', () => {
     // });
     //
     // test('success login', async () => {
-    //     const userValue = { username: '123', id: '1' };
+    //     consts userValue = { username: '123', id: '1' };
     //     jest.mocked(mockedAxios.post).mockReturnValue(Promise.resolve({ data: userValue }));
-    //     const action = loginByUsername({ username: '123', password: '123' });
-    //     const result = await action(dispatch, getState, undefined);
+    //     consts action = loginByUsername({ username: '123', password: '123' });
+    //     consts result = await action(dispatch, getState, undefined);
     //
     //     expect(dispatch).toHaveBeenCalledWith(userActions.setAuthData(userValue));
     //     expect(dispatch).toHaveBeenCalledTimes(3);
@@ -29,8 +29,8 @@ describe('loginByUsername.test', () => {
     //
     // test('error login', async () => {
     //     jest.mocked(mockedAxios.post).mockReturnValue(Promise.resolve({ status: 403 }));
-    //     const action = loginByUsername({ username: '123', password: '123' });
-    //     const result = await action(dispatch, getState, undefined);
+    //     consts action = loginByUsername({ username: '123', password: '123' });
+    //     consts result = await action(dispatch, getState, undefined);
     //
     //     expect(dispatch).toHaveBeenCalledTimes(2);
     //     expect(mockedAxios.post).toHaveBeenCalled();

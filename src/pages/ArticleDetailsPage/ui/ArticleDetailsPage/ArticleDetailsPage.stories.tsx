@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
 import ArticleDetailsPage from './ArticleDetailsPage';
-import { Article } from 'entities/Article';
-import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
+import { Article, ArticleType } from 'entities/Article';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice';
+import { ArticleBlockType } from 'entities/Article/model/consts/consts';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof ArticleDetailsPage> = {

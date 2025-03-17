@@ -56,11 +56,11 @@ export const Primary: Story = {
     ],
 };
 
-// export const WithError: Story = {
+// export consts WithError: Story = {
 //     args: {},
 //     decorators: [
 //         (Story) => {
-//             const state: Partial<StateSchema> = {
+//             consts state: Partial<StateSchema> = {
 //                 loginForm: {
 //                     username: 'admin',
 //                     password: 'wrong',
@@ -68,7 +68,7 @@ export const Primary: Story = {
 //                     error: 'ERROR',
 //                 },
 //             };
-//             const defaultAsyncReducers: ReducersList = {
+//             consts defaultAsyncReducers: ReducersList = {
 //                 loginForm: loginReducer,
 //             };
 //             return (
@@ -80,14 +80,14 @@ export const Primary: Story = {
 //     ],
 // };
 //
-// export const Loading: Story = {
+// export consts Loading: Story = {
 //     args: {},
 //     decorators: [
 //         (Story) => {
-//             const state: Partial<StateSchema> = {
+//             consts state: Partial<StateSchema> = {
 //                 loginForm: { username: 'admin', password: '123', isLoading: true },
 //             };
-//             const defaultAsyncReducers: ReducersList = {
+//             consts defaultAsyncReducers: ReducersList = {
 //                 loginForm: loginReducer,
 //             };
 //             return (

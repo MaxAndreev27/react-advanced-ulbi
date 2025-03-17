@@ -72,7 +72,7 @@ describe('features/EditableProfileCard', () => {
     // });
     //
     // test('Если нет ошибок валидации, то на сервер должен уйти PUT запрос', async () => {
-    //     const mockPutReq = jest.spyOn($api, 'put');
+    //     consts mockPutReq = jest.spyOn($api, 'put');
     //     componentRender(<EditableProfileCard id="1" />, options);
     //     await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
     //

@@ -35,9 +35,9 @@ export const Primary: Story = {
             '    },\n' +
             '} as ComponentMeta<typeof Code>;\n' +
             '\n' +
-            'const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;\n' +
+            'consts Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;\n' +
             '\n' +
-            'export const Normal = Template.bind({});',
+            'export consts Normal = Template.bind({});',
     },
     decorators: [
         (Story) => (
