@@ -1,5 +1,10 @@
 import { Fragment, ReactNode } from 'react';
-import { Listbox as HListBox } from '@headlessui/react';
+import {
+    Listbox as HListBox,
+    ListboxButton as HListBoxButton,
+    ListboxOption as HListboxOption,
+    ListboxOptions as HListboxOptions,
+} from '@headlessui/react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { DropdownDirection } from 'shared/types/ui';
 import { HStack } from '../../../Stack';
@@ -49,12 +54,12 @@ export function ListBox(props: ListBoxProps) {
                 value={value}
                 onChange={onChange}
             >
-                <HListBox.Button disabled={readonly} className={cls.trigger}>
+                <HListBoxButton disabled={readonly} className={cls.trigger}>
                     <Button disabled={readonly}>{value ?? defaultValue}</Button>
-                </HListBox.Button>
-                <HListBox.Options className={classNames(cls.options, {}, optionsClasses)}>
+                </HListBoxButton>
+                <HListboxOptions className={classNames(cls.options, {}, optionsClasses)}>
                     {items?.map((item) => (
-                        <HListBox.Option
+                        <HListboxOption
                             key={item.value}
                             value={item.value}
                             disabled={item.disabled}
@@ -71,9 +76,9 @@ export function ListBox(props: ListBoxProps) {
                                     {item.content}
                                 </li>
                             )}
-                        </HListBox.Option>
+                        </HListboxOption>
                     ))}
-                </HListBox.Options>
+                </HListboxOptions>
             </HListBox>
         </HStack>
     );
