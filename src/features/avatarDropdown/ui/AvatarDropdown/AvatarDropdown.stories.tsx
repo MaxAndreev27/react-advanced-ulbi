@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { AvatarDropdown } from './AvatarDropdown';
 import { Theme } from 'app/providers/ThemeProvider';
+import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof AvatarDropdown> = {
@@ -33,10 +34,20 @@ type Story = StoryObj<typeof AvatarDropdown>;
 export const Primary: Story = {
     args: {},
     decorators: [
-        (Story) => (
-            <div className={`app ${Theme.LIGHT}`}>
-                <Story />
-            </div>
-        ),
+        (Story) => {
+            const state: Partial<StateSchema> = {
+                user: {
+                    authData: { id: '1', username: 'admin' },
+                    _inited: true,
+                },
+            };
+            return (
+                <StoreProvider initialState={state}>
+                    <div className={`app ${Theme.LIGHT}`}>
+                        <Story />
+                    </div>
+                </StoreProvider>
+            );
+        },
     ],
 };
