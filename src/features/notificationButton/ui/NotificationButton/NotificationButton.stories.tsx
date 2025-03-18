@@ -1,12 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Dropdown } from './Dropdown';
+import { NotificationButton } from './NotificationButton';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Button } from '../Button/Button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
-const meta: Meta<typeof Dropdown> = {
-    title: 'shared/Dropdown',
-    component: Dropdown,
+const meta: Meta<typeof NotificationButton> = {
+    title: 'features/NotificationButton',
+    component: NotificationButton,
     parameters: {
         // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
         // layout: 'centered',
@@ -19,27 +18,20 @@ const meta: Meta<typeof Dropdown> = {
     },
     // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
     // args: { onClick: fn() },
+    decorators: [
+        (Story) => (
+            <div style={{ padding: 100 }}>
+                <Story />
+            </div>
+        ),
+    ],
 };
-
 export default meta;
-type Story = StoryObj<typeof Dropdown>;
+type Story = StoryObj<typeof NotificationButton>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
-    args: {
-        trigger: <Button>Open</Button>,
-        items: [
-            {
-                content: 'first',
-            },
-            {
-                content: 'second',
-            },
-            {
-                content: 'third',
-            },
-        ],
-    },
+    args: {},
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
