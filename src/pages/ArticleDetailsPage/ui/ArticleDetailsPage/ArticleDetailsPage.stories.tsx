@@ -73,7 +73,7 @@ export const Normal: Story = {
     args: {},
     decorators: [
         (Story) => {
-            const state: Partial<StateSchema> = {
+            const state: DeepPartial<StateSchema> = {
                 articleDetails: {
                     data: article,
                     isLoading: false,

@@ -73,7 +73,7 @@ export const Normal: Story = {
     args: {},
     decorators: [
         (Story) => {
-            const state: Partial<StateSchema> = {
+            const state: DeepPartial<StateSchema> = {
                 articleDetails: {
                     data: article,
                     isLoading: false,
@@ -97,7 +97,7 @@ export const Loading: Story = {
     args: {},
     decorators: [
         (Story) => {
-            const state: Partial<StateSchema> = {
+            const state: DeepPartial<StateSchema> = {
                 articleDetails: {
                     isLoading: true,
                 },
@@ -120,7 +120,7 @@ export const Error: Story = {
     args: {},
     decorators: [
         (Story) => {
-            const state: Partial<StateSchema> = {
+            const state: DeepPartial<StateSchema> = {
                 articleDetails: {
                     isLoading: false,
                     error: 'error',

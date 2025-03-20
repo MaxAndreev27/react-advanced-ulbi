@@ -33,7 +33,7 @@ export const Normal: Story = {
     args: {},
     decorators: [
         (Story) => {
-            const state: Partial<StateSchema> = {
+            const state: DeepPartial<StateSchema> = {
                 profile: {
                     form: {
                         username: 'admin',
@@ -67,7 +67,7 @@ export const Dark: Story = {
     args: {},
     decorators: [
         (Story) => {
-            const state: Partial<StateSchema> = {
+            const state: DeepPartial<StateSchema> = {
                 profile: {
                     form: {
                         username: 'admin',

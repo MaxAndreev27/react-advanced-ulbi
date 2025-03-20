@@ -37,7 +37,7 @@ export const Primary: Story = {
     },
     decorators: [
         (Story) => {
-            const state: Partial<StateSchema> = {
+            const state: DeepPartial<StateSchema> = {
                 loginForm: { username: 'admin', password: '123', isLoading: false },
             };
             const defaultAsyncReducers: ReducersList = {
@@ -60,7 +60,7 @@ export const Primary: Story = {
 //     args: {},
 //     decorators: [
 //         (Story) => {
-//             consts state: Partial<StateSchema> = {
+//             consts state: DeepPartial<StateSchema> = {
 //                 loginForm: {
 //                     username: 'admin',
 //                     password: 'wrong',
@@ -84,7 +84,7 @@ export const Primary: Story = {
 //     args: {},
 //     decorators: [
 //         (Story) => {
-//             consts state: Partial<StateSchema> = {
+//             consts state: DeepPartial<StateSchema> = {
 //                 loginForm: { username: 'admin', password: '123', isLoading: true },
 //             };
 //             consts defaultAsyncReducers: ReducersList = {

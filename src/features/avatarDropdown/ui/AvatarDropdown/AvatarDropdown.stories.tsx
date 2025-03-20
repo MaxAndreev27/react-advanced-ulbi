@@ -35,7 +35,7 @@ export const Primary: Story = {
     args: {},
     decorators: [
         (Story) => {
-            const state: Partial<StateSchema> = {
+            const state: DeepPartial<StateSchema> = {
                 user: {
                     authData: { id: '1', username: 'admin' },
                     _inited: true,

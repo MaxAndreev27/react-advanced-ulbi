@@ -47,7 +47,7 @@ const article: Article = {
 
 describe('articleDetailsSlice.test', () => {
     test('test articleDetails service load pending', () => {
-        const state: Partial<ArticleDetailsSchema> = {
+        const state: DeepPartial<ArticleDetailsSchema> = {
             isLoading: false,
         };
 
@@ -59,7 +59,7 @@ describe('articleDetailsSlice.test', () => {
     });
 
     test('test articleDetails service fullfiled', () => {
-        const state: Partial<ArticleDetailsSchema> = {
+        const state: DeepPartial<ArticleDetailsSchema> = {
             isLoading: true,
         };
 

@@ -29,7 +29,7 @@ export const Light: Story = {
     args: {},
     decorators: [
         (Story) => {
-            const state: Partial<StateSchema> = {
+            const state: DeepPartial<StateSchema> = {
                 user: {
                     authData: { id: '1', username: 'admin' },
                     _inited: true,
@@ -50,7 +50,7 @@ export const Dark: Story = {
     args: {},
     decorators: [
         (Story) => {
-            const state: Partial<StateSchema> = {
+            const state: DeepPartial<StateSchema> = {
                 user: {
                     authData: { id: '1', username: 'admin' },
                     _inited: true,
@@ -71,7 +71,7 @@ export const NoAuthSidebar: Story = {
     args: {},
     decorators: [
         (Story) => {
-            const state: Partial<StateSchema> = {
+            const state: DeepPartial<StateSchema> = {
                 user: { _inited: false },
             };
             return (
