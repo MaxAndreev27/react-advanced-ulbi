@@ -1,8 +1,8 @@
 import { StoryObj } from '@storybook/react/*';
 import { Meta } from '@storybook/react';
-import { StoreProvider } from 'app/providers/StoreProvider';
+import { StoreProvider } from '@/app/providers/StoreProvider';
 import { ArticleRecommendationsList } from './ArticleRecommendationsList';
-import { Article } from 'entities/Article';
+import { Article } from '@/entities/Article';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof ArticleRecommendationsList> = {

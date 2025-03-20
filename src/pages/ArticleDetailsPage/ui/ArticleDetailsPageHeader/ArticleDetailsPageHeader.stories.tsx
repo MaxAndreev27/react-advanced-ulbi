@@ -1,7 +1,7 @@
 import { StoryObj } from '@storybook/react/*';
 import { ArticleDetailsPageHeader } from './ArticleDetailsPageHeader';
-import { StoreProvider } from 'app/providers/StoreProvider';
-import { Theme } from 'app/providers/ThemeProvider';
+import { StoreProvider } from '@/app/providers/StoreProvider';
+import { Theme } from '@/app/providers/ThemeProvider';
 import { Meta } from '@storybook/react';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export

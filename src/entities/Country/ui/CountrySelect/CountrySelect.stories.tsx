@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { CountrySelect } from './CountrySelect';
-import { Theme } from 'app/providers/ThemeProvider';
+import { Theme } from '@/app/providers/ThemeProvider';
 import { Country } from '../../model/types/country';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
