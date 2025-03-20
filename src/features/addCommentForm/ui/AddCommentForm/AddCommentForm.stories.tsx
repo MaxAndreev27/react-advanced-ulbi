@@ -56,45 +56,45 @@ export const Primary: Story = {
     ],
 };
 
-// export consts WithError: Story = {
-//     args: {},
-//     decorators: [
-//         (Story) => {
-//             consts state: DeepPartial<StateSchema> = {
-//                 loginForm: {
-//                     username: 'admin',
-//                     password: 'wrong',
-//                     isLoading: false,
-//                     error: 'ERROR',
-//                 },
-//             };
-//             consts defaultAsyncReducers: ReducersList = {
-//                 loginForm: loginReducer,
-//             };
-//             return (
-//                 <StoreProvider initialState={state} asyncReducers={{ ...defaultAsyncReducers }}>
-//                     <Story />
-//                 </StoreProvider>
-//             );
-//         },
-//     ],
-// };
-//
-// export consts Loading: Story = {
-//     args: {},
-//     decorators: [
-//         (Story) => {
-//             consts state: DeepPartial<StateSchema> = {
-//                 loginForm: { username: 'admin', password: '123', isLoading: true },
-//             };
-//             consts defaultAsyncReducers: ReducersList = {
-//                 loginForm: loginReducer,
-//             };
-//             return (
-//                 <StoreProvider initialState={state} asyncReducers={{ ...defaultAsyncReducers }}>
-//                     <Story />
-//                 </StoreProvider>
-//             );
-//         },
-//     ],
-// };
+export const WithError: Story = {
+    args: {},
+    decorators: [
+        (Story) => {
+            const state: DeepPartial<StateSchema> = {
+                loginForm: {
+                    username: 'admin',
+                    password: 'wrong',
+                    isLoading: false,
+                    error: 'ERROR',
+                },
+            };
+            const defaultAsyncReducers: ReducersList = {
+                loginForm: loginReducer,
+            };
+            return (
+                <StoreProvider initialState={state} asyncReducers={{ ...defaultAsyncReducers }}>
+                    <Story />
+                </StoreProvider>
+            );
+        },
+    ],
+};
+
+export const Loading: Story = {
+    args: {},
+    decorators: [
+        (Story) => {
+            const state: DeepPartial<StateSchema> = {
+                loginForm: { username: 'admin', password: '123', isLoading: true },
+            };
+            const defaultAsyncReducers: ReducersList = {
+                loginForm: loginReducer,
+            };
+            return (
+                <StoreProvider initialState={state} asyncReducers={{ ...defaultAsyncReducers }}>
+                    <Story />
+                </StoreProvider>
+            );
+        },
+    ],
+};
