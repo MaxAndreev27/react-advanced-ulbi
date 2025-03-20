@@ -63,8 +63,8 @@
         "@types/webpack": "^5.28.5",
         "@types/webpack-bundle-analyzer": "^4.7.0",
         "@types/webpack-dev-server": "^4.7.1",
-        "@typescript-eslint/eslint-plugin": "^8.21.0",
-        "@typescript-eslint/parser": "^8.21.0",
+        "@typescript-eslint/eslint-plugin": "^8.27.0",
+        "@typescript-eslint/parser": "^8.27.0",
         "babel-loader": "^9.2.1",
         "babel-plugin-i18next-extract": "^1.0.0",
         "circular-dependency-plugin": "^5.2.2",
@@ -101,7 +101,7 @@
         "stylelint-config-standard-scss": "^14.0.0",
         "ts-loader": "^9.5.1",
         "ts-node": "^10.9.2",
-        "typescript": "^5.7.2",
+        "typescript": "^5.8.2",
         "webpack": "^5.97.1",
         "webpack-bundle-analyzer": "^4.10.2",
         "webpack-cli": "^6.0.1",
@@ -109,7 +109,6 @@
     },
     "dependencies": {
         "@headlessui/react": "^2.2.0",
-        "@react-spring/web": "^9.7.5",
         "@reduxjs/toolkit": "^2.5.1",
         "@use-gesture/react": "^10.3.1",
         "axios": "^1.7.9",
@@ -123,6 +122,7 @@
         "react-i18next": "^15.4.0",
         "react-redux": "^9.2.0",
         "react-router-dom": "^7.1.1",
+        "react-spring-web-modified": "^1.0.0",
         "react-virtualized": "^9.22.6"
     },
     "loki": {
