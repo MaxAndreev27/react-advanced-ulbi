@@ -61,3 +61,6 @@ Thumbs.db
 
 # Jest-html-reporters
 /reports
+
+# extractedi18n
+/extractedTranslations
