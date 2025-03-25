@@ -109,7 +109,7 @@ export default [
             'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
             'no-param-reassign': 'off',
             'no-undef': 'off',
-            'future-slice/path-checker': 'error',
+            'future-slice/path-checker': ['error', { alias: '@' }],
         },
     },
     {
