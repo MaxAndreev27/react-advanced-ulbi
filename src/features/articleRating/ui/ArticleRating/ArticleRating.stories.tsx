@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Theme } from '@/app/providers/ThemeProvider';
 import ArticleRating from './ArticleRating';
+import { StoreProvider } from '@/app/providers/StoreProvider';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof ArticleRating> = {
@@ -24,13 +25,56 @@ export default meta;
 type Story = StoryObj<typeof ArticleRating>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
-    args: {},
+export const Normal: Story = {
+    args: { articleId: '1' },
     decorators: [
-        (Story) => (
-            <div className={`app ${Theme.LIGHT}`}>
-                <Story />
-            </div>
-        ),
+        (Story) => {
+            return (
+                <StoreProvider>
+                    <div className={`app ${Theme.LIGHT}`}>
+                        <Story />
+                    </div>
+                </StoreProvider>
+            );
+        },
     ],
+    parameters: {
+        mockData: [
+            {
+                url: `${__API__}/article-ratings?userId=1&articleId=1`,
+                method: 'GET',
+                status: 200,
+                response: [
+                    {
+                        rate: 4,
+                    },
+                ],
+            },
+        ],
+    },
+};
+
+export const WithoutRate: Story = {
+    args: { articleId: '1' },
+    decorators: [
+        (Story) => {
+            return (
+                <StoreProvider>
+                    <div className={`app ${Theme.LIGHT}`}>
+                        <Story />
+                    </div>
+                </StoreProvider>
+            );
+        },
+    ],
+    parameters: {
+        mockData: [
+            {
+                url: `${__API__}/article-ratings?userId=1&articleId=1`,
+                method: 'GET',
+                status: 200,
+                response: [],
+            },
+        ],
+    },
 };
