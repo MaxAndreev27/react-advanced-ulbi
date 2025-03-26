@@ -1,13 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import AddCommentForm from './AddCommentForm';
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
-import { loginReducer } from '@/features/AuthByUsername';
-import { ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { action } from '@storybook/addon-actions';
-import { addCommentFormReducer } from '../../model/slices/addCommentFormSlice';
-import { articleDetailsReducer } from '@/entities/Article';
-import { articleDetailsCommentsReducer } from '@/pages/ArticleDetailsPage';
-import { profileReducer } from '@/features/editableProfileCard';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof AddCommentForm> = {
@@ -40,15 +34,8 @@ export const Primary: Story = {
             const state: DeepPartial<StateSchema> = {
                 loginForm: { username: 'admin', password: '123', isLoading: false },
             };
-            const defaultAsyncReducers: ReducersList = {
-                loginForm: loginReducer,
-                profile: profileReducer,
-                articleDetails: articleDetailsReducer,
-                addCommentForm: addCommentFormReducer,
-                articleDetailsPage: articleDetailsCommentsReducer,
-            };
             return (
-                <StoreProvider initialState={state} asyncReducers={{ ...defaultAsyncReducers }}>
+                <StoreProvider initialState={state}>
                     <Story />
                 </StoreProvider>
             );
@@ -68,11 +55,8 @@ export const WithError: Story = {
                     error: 'ERROR',
                 },
             };
-            const defaultAsyncReducers: ReducersList = {
-                loginForm: loginReducer,
-            };
             return (
-                <StoreProvider initialState={state} asyncReducers={{ ...defaultAsyncReducers }}>
+                <StoreProvider initialState={state}>
                     <Story />
                 </StoreProvider>
             );
@@ -87,11 +71,8 @@ export const Loading: Story = {
             const state: DeepPartial<StateSchema> = {
                 loginForm: { username: 'admin', password: '123', isLoading: true },
             };
-            const defaultAsyncReducers: ReducersList = {
-                loginForm: loginReducer,
-            };
             return (
-                <StoreProvider initialState={state} asyncReducers={{ ...defaultAsyncReducers }}>
+                <StoreProvider initialState={state}>
                     <Story />
                 </StoreProvider>
             );

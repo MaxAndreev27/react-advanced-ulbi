@@ -110,6 +110,13 @@ export default [
             'no-param-reassign': 'off',
             'no-undef': 'off',
             'future-slice/path-checker': ['error', { alias: '@' }],
+            'future-slice/layer-imports': [
+                'error',
+                {
+                    alias: '@',
+                    ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+                },
+            ],
             'future-slice/public-api-imports': [
                 'error',
                 {
