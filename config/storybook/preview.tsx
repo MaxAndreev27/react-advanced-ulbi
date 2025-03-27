@@ -12,6 +12,17 @@ const preview: Preview = {
                 date: /Date$/i,
             },
         },
+        layout: 'fullscreen',
+        backgrounds: {
+            values: [
+                { name: 'dark', value: '#000000' },
+                { name: 'light', value: '#ffffff' },
+                { name: 'orange', value: '#ffb005' },
+                { name: 'twitter', value: '#00aced' },
+                { name: 'facebook', value: '#3b5998' },
+            ],
+            default: 'light',
+        },
     },
     decorators: [
         (Story) => {
