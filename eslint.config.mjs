@@ -10,6 +10,7 @@ import { FlatCompat } from '@eslint/eslintrc';
 import reactHooks from 'eslint-plugin-react-hooks';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import Index from 'eslint-plugin-future-slice';
+import unusedImports from 'eslint-plugin-unused-imports';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -47,6 +48,7 @@ export default [
             '@typescript-eslint': typescriptEslint,
             i18next: i18Next,
             'react-hooks': reactHooks,
+            'unused-imports': unusedImports,
             'future-slice': Index,
         },
 
@@ -73,6 +75,7 @@ export default [
         rules: {
             'react/jsx-indent': [2, 4],
             'react/jsx-indent-props': [2, 4],
+            'unused-imports/no-unused-imports': 'error',
             indent: [2, 4],
 
             'react/jsx-filename-extension': [
@@ -81,7 +84,6 @@ export default [
                     extensions: ['.js', '.jsx', '.tsx'],
                 },
             ],
-
             'import/no-unresolved': 'off',
             'import/prefer-default-export': 'off',
             'no-unused-vars': 'warn',
@@ -93,7 +95,6 @@ export default [
             'import/extensions': 'off',
             'import/no-extraneous-dependencies': 'off',
             'no-underscore-dangle': 'off',
-
             'i18next/no-literal-string': [
                 'warn',
                 {
@@ -101,7 +102,6 @@ export default [
                     ignoreAttribute: ['data-testid', 'to'],
                 },
             ],
-
             'max-len': ['error', { ignoreComments: true, code: 100 }],
             'jsx-a11y/no-static-element-interactions': 'off',
             'jsx-a11y/click-events-have-key-events': 'off',
