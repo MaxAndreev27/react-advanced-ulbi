@@ -11,7 +11,7 @@ import cls from './ArticleListItem.module.scss';
 import { Article, ArticleTextBlock } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { AppLink } from '@/shared/ui/AppLink';
-import { ArticleBlockType, ArticleView } from '../../model/consts/consts';
+import { ArticleBlockType, ArticleView } from '../../model/consts/articleConsts';
 import { RoutePath } from '@/shared/const/router';
 
 interface ArticleListItemProps {

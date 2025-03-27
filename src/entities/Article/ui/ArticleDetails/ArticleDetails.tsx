@@ -26,7 +26,7 @@ import {
 } from '../../model/selectors/articleDetails';
 import { ArticleBlock } from '../../model/types/article';
 import { HStack, VStack } from '@/shared/ui/Stack';
-import { ArticleBlockType } from '@/entities/Article/model/consts/consts';
+import { ArticleBlockType } from '@/entities/Article/model/consts/articleConsts';
 
 interface ArticleDetailsProps {
     className?: string;

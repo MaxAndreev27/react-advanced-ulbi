@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ArticleListItem } from './ArticleListItem';
 import { Article } from '../../model/types/article';
-import { ArticleBlockType, ArticleType, ArticleView } from '../../model/consts/consts';
+import { ArticleBlockType, ArticleType, ArticleView } from '../../model/consts/articleConsts';
 import { Theme } from '@/shared/const/theme';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export

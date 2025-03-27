@@ -4,7 +4,7 @@ import { Article } from '../../model/types/article';
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
 import { ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
-import { ArticleBlockType, ArticleType } from '../../model/consts/consts';
+import { ArticleBlockType, ArticleType } from '../../model/consts/articleConsts';
 import { Theme } from '@/shared/const/theme';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
