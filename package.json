@@ -28,7 +28,8 @@
         "storybook:build": "storybook build -c ./config/storybook",
         "generate:slice": "node ./scripts/createSlice/index.js",
         "alias:import:add": "ts-node ./scripts/refactoring/updateImports.ts",
-        "public:for:shared": "ts-node ./scripts/refactoring/createPublicApiForSharedUi.ts"
+        "public:for:shared": "ts-node ./scripts/refactoring/createPublicApiForSharedUi.ts",
+        "postinstall": "node ./scripts/clear-cache.js"
     },
     "keywords": [],
     "author": "",
