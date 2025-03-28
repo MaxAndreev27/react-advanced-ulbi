@@ -11,7 +11,7 @@ import { Text, TextTheme } from '@/shared/ui/Text';
 import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleCreate } from '@/shared/const/router';
 
 interface NavbarProps {
     className?: string;
@@ -38,7 +38,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     theme={TextTheme.INVERTED}
                     title={'React Redux App'}
                 />
-                <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.article_create}>
+                <AppLink theme={AppLinkTheme.SECONDARY} to={getRouteArticleCreate()}>
                     {t('New article')}
                 </AppLink>
                 <HStack gap={'16'} className={cls.actions}>
