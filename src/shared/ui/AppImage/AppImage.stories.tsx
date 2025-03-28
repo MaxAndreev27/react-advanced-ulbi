@@ -1,6 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { AppImage } from './AppImage';
 import { Theme } from '@/shared/const/theme';
+import { Skeleton } from '../Skeleton';
+import { Icon } from '../Icon/Icon';
+import UserIcon from '@/shared/assets/icons/user-filled.svg';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof AppImage> = {
@@ -25,7 +28,10 @@ type Story = StoryObj<typeof AppImage>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
-    args: {},
+    args: {
+        fallback: <Skeleton width={100} height={100} border={'50%'} />,
+        errorFallback: <Icon inverted Svg={UserIcon} width={100} height={100} />,
+    },
     decorators: [
         (Story) => (
             <div className={`app ${Theme.LIGHT}`}>
