@@ -18,7 +18,7 @@ export function RequireAuth({ children, roles }: RequireAuthProps) {
         if (!roles) {
             return true;
         }
-
+        // TODO
         return roles.some((requiredRole) => {
             const hasRole = userRoles?.includes(requiredRole);
             return hasRole;
