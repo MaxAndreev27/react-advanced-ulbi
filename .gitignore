@@ -60,7 +60,7 @@ Thumbs.db
 *storybook.log
 
 # Jest-html-reporters
-/reports
+#/reports
 
 # extractedi18n
 /extractedTranslations
