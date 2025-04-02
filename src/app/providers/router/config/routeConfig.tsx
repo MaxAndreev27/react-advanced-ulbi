@@ -60,7 +60,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
         path: getRouteAdmin(),
         element: <AdminPanelPage />,
         authOnly: true,
-        roles: [UserRole.MANAGER, UserRole.ADMIN],
+        roles: [UserRole.ADMIN, UserRole.MANAGER],
     },
     [AppRoutes.FORBIDDEN]: {
         path: getRouteForbidden(),
