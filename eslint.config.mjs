@@ -30,7 +30,6 @@ export default [
             '**/jest.config.js',
         ],
     },
-    eslintConfigPrettier,
     ...compat.extends(
         'plugin:react/recommended',
         'plugin:i18next/recommended',
@@ -73,11 +72,7 @@ export default [
         },
 
         rules: {
-            'react/jsx-indent': [2, 4],
-            'react/jsx-indent-props': [2, 4],
             'unused-imports/no-unused-imports': 'error',
-            indent: [2, 4],
-
             'react/jsx-filename-extension': [
                 2,
                 {
@@ -133,4 +128,5 @@ export default [
             'max-len': 'off',
         },
     },
+    eslintConfigPrettier,
 ];
