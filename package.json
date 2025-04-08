@@ -30,7 +30,8 @@
         "generate:slice": "node ./scripts/createSlice/index.js",
         "alias:import:add": "ts-node ./scripts/refactoring/updateImports.ts",
         "public:for:shared": "ts-node ./scripts/refactoring/createPublicApiForSharedUi.ts",
-        "postinstall": "node ./scripts/clear-cache.js"
+        "postinstall": "node ./scripts/clear-cache.js",
+        "remove:feature": "ts-node ./scripts/remove-feature.ts"
     },
     "lint-staged": {
         "**/*.{ts,tsx}": "eslint"
