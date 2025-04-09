@@ -1,10 +1,14 @@
-.navbar {
+.Navbar {
     width: 100%;
     height: var(--navbar-height);
     background: var(--inverted-bg-color);
     display: flex;
     align-items: center;
     padding: 20px;
+}
+
+.NavbarRedesigned {
+    padding: 16px;
 }
 
 .links,
@@ -18,5 +22,5 @@
 
 .appName {
     width: var(--sidebar-width);
-    margin-left: 10px;
+    margin-left: 15px;
 }
