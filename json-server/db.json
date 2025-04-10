@@ -633,6 +633,10 @@
             "features": {
                 "isArticleRatingEnabled": false,
                 "isCounterEnabled": false
+            },
+            "jsonSettings": {
+                "isArticlesPageWasOpened": true,
+                "theme": "app_light_theme"
             }
         },
         {
