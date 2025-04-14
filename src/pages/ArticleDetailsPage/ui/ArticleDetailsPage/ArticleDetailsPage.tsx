@@ -15,8 +15,6 @@ import { ArticleRecommendationsList } from '@/features/articleRecommendationsLis
 import { ArticleDetailsComments } from '@/pages/ArticleDetailsPage/ui/ArticleDetailsComments/ArticleDetailsComments';
 import { ArticleRating } from '@/features/articleRating';
 import { useTranslation } from 'react-i18next';
-import { Card } from '@/shared/ui/deprecated/Card';
-import { ToggleFeatures } from '@/shared/lib/features';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -47,11 +45,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                 <VStack gap={'16'} max>
                     <ArticleDetailsPageHeader />
                     <ArticleDetails id={id} />
-                    <ToggleFeatures
-                        feature="isArticleRatingEnabled"
-                        on={<ArticleRating articleId={id} />}
-                        off={<Card>{t('Article rating coming soon!')}</Card>}
-                    />
+                    <ArticleRating articleId={id} />
                     <ArticleRecommendationsList />
                     <ArticleDetailsComments id={id} />
                 </VStack>
