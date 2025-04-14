@@ -7,7 +7,7 @@ import {
 import { memo, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Text, TextAlign, TextSize } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
 import { Avatar } from '@/shared/ui/deprecated/Avatar';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
@@ -25,7 +25,7 @@ import {
     getArticleDetailsIsLoading,
 } from '../../model/selectors/articleDetails';
 import { ArticleBlock } from '../../model/types/article';
-import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { ArticleBlockType } from '@/entities/Article/model/consts/articleConsts';
 
 interface ArticleDetailsProps {
@@ -87,9 +87,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
             </>
         );
     } else if (error) {
-        content = (
-            <Text align={TextAlign.CENTER} title={t('Произошла ошибка при загрузке статьи.')} />
-        );
+        content = <Text align={'center'} title={t('Произошла ошибка при загрузке статьи.')} />;
     } else {
         content = (
             <>
@@ -101,7 +99,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                         className={cls.title}
                         title={article?.title}
                         text={article?.subtitle}
-                        size={TextSize.L}
+                        size={'l'}
                     />
                     <HStack gap={'8'} className={cls.articleInfo}>
                         <Icon className={cls.icon} Svg={EyeIcon} />

@@ -6,9 +6,9 @@ import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
 import { LoginModal } from '@/features/AuthByUsername';
 import { useSelector } from 'react-redux';
 import { getUserAuthData } from '@/entities/User';
-import { AppLink, AppLinkTheme } from '@/shared/ui/deprecated/AppLink';
-import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
-import { HStack } from '@/shared/ui/deprecated/Stack';
+import { AppLink } from '@/shared/ui/deprecated/AppLink';
+import { Text } from '@/shared/ui/redesigned/Text';
+import { HStack } from '@/shared/ui/redesigned/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import { getRouteArticleCreate } from '@/shared/const/router';
@@ -45,16 +45,8 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                 }
                 off={
                     <header className={classNames(cls.Navbar, {}, [className])}>
-                        <Text
-                            className={cls.appName}
-                            title={t('React Redux App')}
-                            theme={TextTheme.INVERTED}
-                        />
-                        <AppLink
-                            to={getRouteArticleCreate()}
-                            theme={AppLinkTheme.SECONDARY}
-                            className={cls.createBtn}
-                        >
+                        <Text className={cls.appName} title={t('React Redux App')} />
+                        <AppLink to={getRouteArticleCreate()} className={cls.createBtn}>
                             {t('New article')}
                         </AppLink>
                         <HStack gap="16" className={cls.actions}>

@@ -1,12 +1,12 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
-import { Text, TextSize } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { AddCommentForm } from '@/features/addCommentForm';
 import { CommentList } from '@/entities/Comment';
 import { useSelector } from 'react-redux';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { VStack } from '@/shared/ui/deprecated/Stack';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { getArticleComments } from '../../model/slices/articleDetailsCommentsSlice';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
@@ -38,7 +38,7 @@ export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) 
 
     return (
         <VStack gap="16" max className={classNames('', {}, [className])}>
-            <Text size={TextSize.L} title={t('Comments')} />
+            <Text size={'l'} title={t('Comments')} />
             <AddCommentForm onSendComment={onSendComment} />
             <CommentList isLoading={commentsIsLoading} comments={comments} />
         </VStack>

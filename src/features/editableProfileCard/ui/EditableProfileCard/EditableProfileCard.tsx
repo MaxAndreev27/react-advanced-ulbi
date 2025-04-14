@@ -6,13 +6,13 @@ import { useSelector } from 'react-redux';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
-import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { ProfileCard } from '@/entities/Profile';
 import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { VStack } from '@/shared/ui/deprecated/Stack';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';
@@ -122,7 +122,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
                     validateErrors.map((err) => (
                         <Text
                             key={err}
-                            theme={TextTheme.ERROR}
+                            variant={'error'}
                             text={validateErrorTranslates[err]}
                             data-testid="EditableProfileCard.Error"
                         />

@@ -2,9 +2,7 @@ import React, { FC, memo, SVGProps } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Icon.module.scss';
 
-type SvgProps = Omit<React.SVGProps<SVGSVGElement>, 'onClick'>;
-
-interface IconBaseProps extends SvgProps {
+interface IconBaseProps extends SVGProps<SVGElement> {
     className?: string;
     Svg: FC<SVGProps<SVGElement>>;
 }

@@ -4,7 +4,7 @@ import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
 import { Input } from '@/shared/ui/deprecated/Input';
 import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
-import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
@@ -64,7 +64,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                 {error && (
                     <Text
                         text={t('You have entered an incorrect login or password')}
-                        theme={TextTheme.ERROR}
+                        variant={'error'}
                     />
                 )}
                 <Input

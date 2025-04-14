@@ -1,5 +1,5 @@
-import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Flex.module.scss';
 
 export type FlexJustify = 'start' | 'center' | 'end' | 'between';
@@ -43,10 +43,7 @@ export interface FlexProps extends DivProps {
     gap?: FlexGap;
     max?: boolean;
 }
-/**
- * Устарел, используем новые компоненты из папки redesigned
- * @deprecated
- */
+
 export const Flex = (props: FlexProps) => {
     const {
         className,
