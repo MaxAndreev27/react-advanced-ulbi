@@ -29,7 +29,6 @@ export const Icon = memo((props: IconProps) => {
         'data-testid': dataTestId,
         ...otherProps
     } = props;
-    console.log(`dataTestId: ${JSON.stringify(dataTestId)}`);
 
     const icon = (
         <Svg
