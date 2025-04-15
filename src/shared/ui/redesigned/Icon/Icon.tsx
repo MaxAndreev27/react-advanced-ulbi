@@ -5,6 +5,7 @@ import cls from './Icon.module.scss';
 interface IconBaseProps extends SVGProps<SVGElement> {
     className?: string;
     Svg: FC<SVGProps<SVGElement>>;
+    'data-testid'?: string;
 }
 
 interface NonClickableIconProps extends IconBaseProps {
@@ -19,7 +20,16 @@ interface ClickableBaseProps extends IconBaseProps {
 type IconProps = NonClickableIconProps | ClickableBaseProps;
 
 export const Icon = memo((props: IconProps) => {
-    const { className, Svg, width = 32, height = 32, clickable, ...otherProps } = props;
+    const {
+        className,
+        Svg,
+        width = 32,
+        height = 32,
+        clickable,
+        'data-testid': dataTestId,
+        ...otherProps
+    } = props;
+    console.log(`dataTestId: ${JSON.stringify(dataTestId)}`);
 
     const icon = (
         <Svg
@@ -38,6 +48,7 @@ export const Icon = memo((props: IconProps) => {
                 className={cls.button}
                 onClick={props.onClick}
                 style={{ height, width }}
+                data-testid={dataTestId}
             >
                 {icon}
             </button>
