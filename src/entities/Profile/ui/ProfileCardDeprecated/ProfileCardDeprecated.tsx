@@ -9,21 +9,13 @@ import { Input as InputDeprecated } from '@/shared/ui/deprecated/Input';
 import { CurrencySelect } from '@/entities/Currency';
 import { CountrySelect } from '@/entities/Country';
 import { Loader } from '@/shared/ui/deprecated/Loader';
-import {
-    Text as TextDeprecated,
-    TextAlign,
-    TextTheme,
-} from '@/shared/ui/deprecated/Text';
+import { Text as TextDeprecated, TextAlign, TextTheme } from '@/shared/ui/deprecated/Text';
 
 export const ProfileCardDeprecatedError = () => {
     const { t } = useTranslation();
 
     return (
-        <HStack
-            justify="center"
-            max
-            className={classNames(cls.ProfileCard, {}, [cls.error])}
-        >
+        <HStack justify="center" max className={classNames(cls.ProfileCard, {}, [cls.error])}>
             <TextDeprecated
                 theme={TextTheme.ERROR}
                 title={t('Произошла ошибка при загрузке профиля')}
@@ -67,11 +59,7 @@ export const ProfileCardDeprecated = memo((props: ProfileCardProps) => {
     };
 
     return (
-        <VStack
-            gap="8"
-            max
-            className={classNames(cls.ProfileCard, mods, [className])}
-        >
+        <VStack gap="8" max className={classNames(cls.ProfileCard, mods, [className])}>
             {data?.avatar && (
                 <HStack justify="center" max className={cls.avatarWrapper}>
                     <AvatarDeprecated src={data?.avatar} />
