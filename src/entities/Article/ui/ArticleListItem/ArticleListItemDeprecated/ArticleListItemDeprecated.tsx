@@ -6,10 +6,7 @@ import { Text } from '@/shared/ui/deprecated/Text';
 import { Icon } from '@/shared/ui/deprecated/Icon';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
 import { ArticleTextBlock } from '../../../model/types/article';
-import {
-    ArticleView,
-    ArticleBlockType,
-} from '../../../model/consts/articleConsts';
+import { ArticleView, ArticleBlockType } from '../../../model/consts/articleConsts';
 import { Card } from '@/shared/ui/deprecated/Card';
 import { Avatar } from '@/shared/ui/deprecated/Avatar';
 import { AppImage } from '@/shared/ui/redesigned/AppImage';
@@ -40,18 +37,12 @@ export const ArticleListItemDeprecated = memo((props: ArticleListItemProps) => {
         return (
             <div
                 data-testid="ArticleListItem"
-                className={classNames(cls.ArticleListItem, {}, [
-                    className,
-                    cls[view],
-                ])}
+                className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
             >
                 <Card className={cls.card}>
                     <div className={cls.header}>
                         <Avatar size={30} src={article.user.avatar} />
-                        <Text
-                            text={article.user.username}
-                            className={cls.username}
-                        />
+                        <Text text={article.user.username} className={cls.username} />
                         <Text text={article.createdAt} className={cls.date} />
                     </div>
                     <Text title={article.title} className={cls.title} />
@@ -63,19 +54,11 @@ export const ArticleListItemDeprecated = memo((props: ArticleListItemProps) => {
                         alt={article.title}
                     />
                     {textBlock && (
-                        <ArticleTextBlockComponent
-                            block={textBlock}
-                            className={cls.textBlock}
-                        />
+                        <ArticleTextBlockComponent block={textBlock} className={cls.textBlock} />
                     )}
                     <div className={cls.footer}>
-                        <AppLink
-                            target={target}
-                            to={getRouteArticleDetails(article.id)}
-                        >
-                            <Button theme={ButtonTheme.OUTLINE}>
-                                {t('Читать далее...')}
-                            </Button>
+                        <AppLink target={target} to={getRouteArticleDetails(article.id)}>
+                            <Button theme={ButtonTheme.OUTLINE}>{t('Читать далее...')}</Button>
                         </AppLink>
                         {views}
                     </div>
@@ -89,10 +72,7 @@ export const ArticleListItemDeprecated = memo((props: ArticleListItemProps) => {
             data-testid="ArticleListItem"
             target={target}
             to={getRouteArticleDetails(article.id)}
-            className={classNames(cls.ArticleListItem, {}, [
-                className,
-                cls[view],
-            ])}
+            className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
         >
             <Card className={cls.card}>
                 <div className={cls.imageWrapper}>
