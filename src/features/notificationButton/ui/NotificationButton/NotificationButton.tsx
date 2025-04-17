@@ -3,7 +3,7 @@ import React, { memo, useCallback, useState } from 'react';
 import { NotificationList } from '@/entities/Notification';
 import cls from './NotificationButton.module.scss';
 import { BrowserView, MobileView } from 'react-device-detect';
-import { Drawer } from '@/shared/ui/deprecated/Drawer';
+import { Drawer } from '@/shared/ui/redesigned/Drawer';
 import NotificationIcon from '@/shared/assets/icons/notification.svg';
 import { Icon } from '@/shared/ui/redesigned/Icon';
 import { Popover } from '@/shared/ui/redesigned/Popups';
