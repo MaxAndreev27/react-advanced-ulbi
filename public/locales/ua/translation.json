@@ -43,5 +43,9 @@
     "Leave your feedback on the article, it will help improve the quality": "Залиште свій відгук про статтю, це допоможе підвищити якість",
     "Thank you for your rating": "Дякуємо за оцінку",
     "Welcome to the articles page": "Ласкаво просимо на сторінку статей",
-    "Here you can search and view articles on various topics": "Тут ви можете шукати та переглядати статті на різні теми"
+    "Here you can search and view articles on various topics": "Тут ви можете шукати та переглядати статті на різні теми",
+    "{{count}} просмотров_zero": "{{count}} просмотров",
+    "{{count}} просмотров_one": "{{count}} просмотр",
+    "{{count}} просмотров_few": "{{count}} просмотра",
+    "{{count}} просмотров_many": "{{count}} просмотров"
 }
