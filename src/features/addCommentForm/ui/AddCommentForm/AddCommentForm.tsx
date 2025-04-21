@@ -67,13 +67,13 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
                         >
                             <Input
                                 className={cls.input}
-                                placeholder={t('Введите текст комментария')}
+                                placeholder={t('Enter comment text')}
                                 value={text}
                                 data-testid="AddCommentForm.Input"
                                 onChange={onCommentTextChange}
                             />
                             <Button data-testid="AddCommentForm.Button" onClick={onSendHandler}>
-                                {t('Отправить')}
+                                {t('Send')}
                             </Button>
                         </HStack>
                     </Card>
@@ -87,7 +87,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
                     >
                         <InputDeprecated
                             className={cls.input}
-                            placeholder={t('Введите текст комментария')}
+                            placeholder={t('Enter comment text')}
                             value={text}
                             data-testid="AddCommentForm.Input"
                             onChange={onCommentTextChange}
@@ -97,7 +97,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
                             theme={ButtonTheme.OUTLINE}
                             onClick={onSendHandler}
                         >
-                            {t('Отправить')}
+                            {t('Send')}
                         </ButtonDeprecated>
                     </HStack>
                 }

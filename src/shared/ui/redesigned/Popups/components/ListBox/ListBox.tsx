@@ -1,9 +1,14 @@
 import { Fragment, ReactNode, useMemo } from 'react';
-import { Listbox as HListBox } from '@headlessui/react';
+import {
+    Listbox as HListBox,
+    ListboxButton as HListBoxButton,
+    ListboxOption as HListboxOption,
+    ListboxOptions as HListboxOptions,
+} from '@headlessui/react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DropdownDirection } from '@/shared/types/ui';
-import { HStack } from '../../../../redesigned/Stack';
-import { Button } from '../../../Button/Button';
+import { HStack } from '@/shared/ui/redesigned/Stack';
+import { Button } from '@/shared/ui/redesigned/Button';
 import cls from './ListBox.module.scss';
 import { mapDirectionClass } from '../../styles/consts';
 import popupCls from '../../styles/popup.module.scss';
@@ -47,7 +52,7 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
 
     return (
         <HStack gap="4">
-            {label && <span>{`${label}>`}</span>}
+            {label && <span>{`${label}`}</span>}
             <HListBox
                 disabled={readonly}
                 as="div"
@@ -55,18 +60,17 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
                 value={value}
                 onChange={onChange}
             >
-                <HListBox.Button disabled={readonly} className={cls.trigger}>
-                    <Button
-                        addonRight={<Icon Svg={ArrowIcon} />}
-                        variant="filled"
-                        disabled={readonly}
-                    >
-                        {selectedItem?.content ?? defaultValue}
-                    </Button>
-                </HListBox.Button>
-                <HListBox.Options className={classNames(cls.options, {}, optionsClasses)}>
+                <HListBoxButton
+                    as={Button}
+                    variant="filled"
+                    disabled={readonly}
+                    addonRight={<Icon Svg={ArrowIcon} />}
+                >
+                    {selectedItem?.content ?? defaultValue}
+                </HListBoxButton>
+                <HListboxOptions className={classNames(cls.options, {}, optionsClasses)}>
                     {items?.map((item) => (
-                        <HListBox.Option
+                        <HListboxOption
                             key={item.value}
                             value={item.value}
                             disabled={item.disabled}
@@ -84,9 +88,9 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
                                     {item.content}
                                 </li>
                             )}
-                        </HListBox.Option>
+                        </HListboxOption>
                     ))}
-                </HListBox.Options>
+                </HListboxOptions>
             </HListBox>
         </HStack>
     );

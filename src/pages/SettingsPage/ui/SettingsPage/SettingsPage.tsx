@@ -10,13 +10,12 @@ interface SettingsPageProps {
 }
 
 const SettingsPage = memo((props: SettingsPageProps) => {
-    const { className } = props;
     const { t } = useTranslation();
 
     return (
         <Page>
             <VStack gap="16">
-                <Text title={t('Настройки пользователя')} />
+                <Text title={t('User settings')} />
                 <UiDesignSwitcher />
             </VStack>
         </Page>

@@ -55,13 +55,13 @@ export const StarRating = memo((props: StarRatingProps) => {
                 [className],
             )}
         >
-            {stars.map((starNumber) => {
+            {stars.map((starNumber, index) => {
                 const commonProps = {
                     className: classNames(cls.starIcon, { [cls.selected]: isSelected }, [
                         currentStarsCount >= starNumber ? cls.hovered : cls.normal,
                     ]),
                     Svg: StarIcon,
-                    key: starNumber,
+                    // key: starNumber,
                     width: size,
                     height: size,
                     onMouseLeave: onLeave,
@@ -72,9 +72,16 @@ export const StarRating = memo((props: StarRatingProps) => {
                 };
                 return (
                     <ToggleFeatures
+                        key={`star-toggle-${index}`}
                         feature="isAppRedesigned"
-                        on={<Icon clickable={!isSelected} {...commonProps} />}
-                        off={<IconDeprecated {...commonProps} />}
+                        on={
+                            <Icon
+                                key={`star-toggle-${index}`}
+                                clickable={!isSelected}
+                                {...commonProps}
+                            />
+                        }
+                        off={<IconDeprecated key={`star-toggle-${index}`} {...commonProps} />}
                     />
                 );
             })}

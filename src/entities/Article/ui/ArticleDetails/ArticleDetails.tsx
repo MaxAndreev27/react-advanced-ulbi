@@ -117,12 +117,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     if (isLoading) {
         content = <ArticleDetailsSkeleton />;
     } else if (error) {
-        content = (
-            <TextDeprecated
-                align={TextAlign.CENTER}
-                title={t('Произошла ошибка при загрузке статьи.')}
-            />
-        );
+        content = <TextDeprecated align={TextAlign.CENTER} title={t('Error articles loading')} />;
     } else {
         content = (
             <ToggleFeatures feature="isAppRedesigned" on={<Redesigned />} off={<Deprecated />} />

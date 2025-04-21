@@ -64,7 +64,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
                         data-testid="RatingCard.Input"
                         value={feedback}
                         onChange={setFeedback}
-                        placeholder={t('Ваш отзыв')}
+                        placeholder={t('Your feedback')}
                     />
                 </>
             }
@@ -75,7 +75,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
                         data-testid="RatingCard.Input"
                         value={feedback}
                         onChange={setFeedback}
-                        placeholder={t('Ваш отзыв')}
+                        placeholder={t('Your feedback')}
                     />
                 </>
             }
@@ -87,8 +87,12 @@ export const RatingCard = memo((props: RatingCardProps) => {
             <VStack align="center" gap="8" max>
                 <ToggleFeatures
                     feature="isAppRedesigned"
-                    on={<Text title={starsCount ? t('Спасибо за оценку!') : title} />}
-                    off={<TextDepreacetd title={starsCount ? t('Спасибо за оценку!') : title} />}
+                    on={<Text title={starsCount ? t('Thank you for your rating') : title} />}
+                    off={
+                        <TextDepreacetd
+                            title={starsCount ? t('Thank you for your rating') : title}
+                        />
+                    }
                 />
                 <StarRating selectedStars={starsCount} size={40} onSelect={onSelectStars} />
             </VStack>
@@ -101,10 +105,10 @@ export const RatingCard = memo((props: RatingCardProps) => {
                             on={
                                 <HStack max gap="16" justify="end">
                                     <Button data-testid="RatingCard.Close" onClick={cancelHandle}>
-                                        {t('Закрыть')}
+                                        {t('Close')}
                                     </Button>
                                     <Button data-testid="RatingCard.Send" onClick={acceptHandle}>
-                                        {t('Отправить')}
+                                        {t('Send')}
                                     </Button>
                                 </HStack>
                             }
@@ -115,13 +119,13 @@ export const RatingCard = memo((props: RatingCardProps) => {
                                         onClick={cancelHandle}
                                         theme={ButtonTheme.OUTLINE_RED}
                                     >
-                                        {t('Закрыть')}
+                                        {t('Close')}
                                     </ButtonDeprecated>
                                     <ButtonDeprecated
                                         data-testid="RatingCard.Send"
                                         onClick={acceptHandle}
                                     >
-                                        {t('Отправить')}
+                                        {t('Send')}
                                     </ButtonDeprecated>
                                 </HStack>
                             }
@@ -137,7 +141,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
                             feature="isAppRedesigned"
                             on={
                                 <Button fullWidth onClick={acceptHandle} size="l">
-                                    {t('Отправить')}
+                                    {t('Send')}
                                 </Button>
                             }
                             off={
@@ -146,7 +150,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
                                     onClick={acceptHandle}
                                     size={ButtonSize.L}
                                 >
-                                    {t('Отправить')}
+                                    {t('Send')}
                                 </ButtonDeprecated>
                             }
                         />

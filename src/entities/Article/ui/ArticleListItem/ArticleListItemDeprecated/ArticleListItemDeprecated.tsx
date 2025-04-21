@@ -58,7 +58,7 @@ export const ArticleListItemDeprecated = memo((props: ArticleListItemProps) => {
                     )}
                     <div className={cls.footer}>
                         <AppLink target={target} to={getRouteArticleDetails(article.id)}>
-                            <Button theme={ButtonTheme.OUTLINE}>{t('Читать далее...')}</Button>
+                            <Button theme={ButtonTheme.OUTLINE}>{t('Read more')}</Button>
                         </AppLink>
                         {views}
                     </div>

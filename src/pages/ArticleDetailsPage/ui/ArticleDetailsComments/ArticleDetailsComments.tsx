@@ -23,7 +23,7 @@ interface ArticleDetailsCommentsProps {
 
 export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) => {
     const { className, id } = props;
-    const { t } = useTranslation();
+    const { t } = useTranslation('article-details');
     const comments = useSelector(getArticleComments.selectAll);
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
     const dispatch = useAppDispatch();
@@ -43,8 +43,8 @@ export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) 
         <VStack gap="16" max className={classNames('', {}, [className])}>
             <ToggleFeatures
                 feature="isAppRedesigned"
-                on={<Text size="l" title={t('Комментарии')} />}
-                off={<TextDeprecated size={TextSize.L} title={t('Комментарии')} />}
+                on={<Text size="l" title={t('Comments')} />}
+                off={<TextDeprecated size={TextSize.L} title={t('Comments')} />}
             />
             <Suspense fallback={<Loader />}>
                 <AddCommentForm onSendComment={onSendComment} />

@@ -26,8 +26,8 @@ export const ArticleAdditionalInfo = memo((props: ArticleAdditionalInfoProps) =>
                 <Text text={author.username} bold />
                 <Text text={createdAt} />
             </HStack>
-            <Button onClick={onEdit}>{t('Редактировать')}</Button>
-            <Text text={t('{{count}} просмотров', { count: views })} />
+            <Button onClick={onEdit}>{t('Edit')}</Button>
+            <Text text={t('{{count}} view', { count: views })} />
         </VStack>
     );
 });

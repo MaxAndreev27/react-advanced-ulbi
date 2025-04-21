@@ -14,9 +14,7 @@ const ThemeProvider = (props: ThemeProviderProps) => {
     const { initialTheme, children } = props;
     const [isThemeInited, setThemeInited] = useState(false);
 
-    const [theme, setTheme] = useState<Theme>(
-        initialTheme || fallbackTheme || Theme.LIGHT,
-    );
+    const [theme, setTheme] = useState<Theme>(initialTheme || fallbackTheme || Theme.LIGHT);
 
     useEffect(() => {
         if (!isThemeInited && initialTheme) {
@@ -38,11 +36,7 @@ const ThemeProvider = (props: ThemeProviderProps) => {
         [theme],
     );
 
-    return (
-        <ThemeContext.Provider value={defaultProps}>
-            {children}
-        </ThemeContext.Provider>
-    );
+    return <ThemeContext.Provider value={defaultProps}>{children}</ThemeContext.Provider>;
 };
 
 export default ThemeProvider;

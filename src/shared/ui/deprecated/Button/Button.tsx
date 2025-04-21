@@ -1,5 +1,5 @@
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
-import React, { ButtonHTMLAttributes, FC, memo, ReactNode } from 'react';
+import React, { ButtonHTMLAttributes, FC, ForwardedRef, forwardRef, memo, ReactNode } from 'react';
 import cls from './Button.module.scss';
 
 export enum ButtonTheme {
@@ -31,7 +31,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
  * Устарел, используем новые компоненты из папки redesigned
  * @deprecated
  */
-export const Button: FC<ButtonProps> = memo((props) => {
+export const Button: FC<ButtonProps> = forwardRef((props, ref: ForwardedRef<HTMLButtonElement>) => {
     const {
         className,
         children,
@@ -59,6 +59,7 @@ export const Button: FC<ButtonProps> = memo((props) => {
             style={{ backgroundColor }}
             disabled={disabled}
             {...otherProps}
+            ref={ref}
         >
             {children}
         </button>

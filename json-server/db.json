@@ -676,7 +676,7 @@
       },
       "jsonSettings": {
         "isArticlesPageWasOpened": true,
-        "theme": "app_orange_theme"
+        "theme": "app_dark_theme"
       }
     },
     {
@@ -801,6 +801,13 @@
       "rate": 2,
       "feedback": "Scala отстой",
       "id": "8kianTO"
+    },
+    {
+      "userId": "1",
+      "articleId": "19",
+      "rate": 2,
+      "feedback": "Відгук",
+      "id": "NeyX73v"
     }
   ],
   "profile-ratings": [

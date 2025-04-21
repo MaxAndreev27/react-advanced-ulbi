@@ -29,8 +29,8 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
         >
             <ToggleFeatures
                 feature="isAppRedesigned"
-                on={<Text size="l" title={t('Рекомендуем')} />}
-                off={<TextDeprecated size={TextSize.L} title={t('Рекомендуем')} />}
+                on={<Text size="l" title={t('Recommend')} />}
+                off={<TextDeprecated size={TextSize.L} title={t('Recommend')} />}
             />
             <ArticleList articles={articles} target="_blank" />
         </VStack>

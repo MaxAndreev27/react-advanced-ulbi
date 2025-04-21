@@ -8,7 +8,7 @@ import {
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DropdownDirection } from '@/shared/types/ui';
 import { HStack } from '@/shared/ui/redesigned/Stack';
-import { Button } from '../../../Button/Button';
+import { Button } from '@/shared/ui/deprecated/Button';
 import cls from './ListBox.module.scss';
 import { mapDirectionClass } from '../../styles/consts';
 import popupCls from '../../styles/popup.module.scss';
@@ -57,8 +57,8 @@ export function ListBox(props: ListBoxProps) {
                 value={value}
                 onChange={onChange}
             >
-                <HListBoxButton disabled={readonly} className={cls.trigger}>
-                    <Button disabled={readonly}>{value ?? defaultValue}</Button>
+                <HListBoxButton as={Button} disabled={readonly} className={cls.trigger}>
+                    {value ?? defaultValue}
                 </HListBoxButton>
                 <HListboxOptions className={classNames(cls.options, {}, optionsClasses)}>
                     {items?.map((item) => (
