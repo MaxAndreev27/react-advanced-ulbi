@@ -20,7 +20,7 @@ describe('Роутинг', () => {
             cy.login();
         });
         it('Переход открывает страницу профиля', () => {
-            cy.visit('/profile/1');
+            cy.visit('/profile/4');
             cy.get(selectByTestId('ProfilePage')).should('exist');
         });
 

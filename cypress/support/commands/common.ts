@@ -25,7 +25,7 @@ export const getByTestId = (testId: string) => {
 declare global {
     namespace Cypress {
         interface Chainable {
-            login(email?: string, password?: string): Chainable<User>;
+            login(username?: string, password?: string): Chainable<User>;
             getByTestId(testId: string): Chainable<JQuery<HTMLElement>>;
         }
     }

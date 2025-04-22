@@ -1,11 +1,11 @@
 {
     "id": "1",
-    "first": "test",
-    "lastname": "user",
-    "age": 465,
-    "currency": "EUR",
-    "country": "Ukraine",
+    "first": "admin",
+    "lastname": "admin",
+    "age": 112,
+    "currency": "RUB",
+    "country": "Belarus",
     "city": "Moscow",
-    "username": "testuser",
-    "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    "username": "admin",
+    "avatar": "https://image.api.playstation.com/vulcan/img/cfn/113079XRqKze-XG5C66saw2iu5NzZBKKc74WSsi37VWopNYI4BstfGjUdc7bn__iGGvgJjZXHFx7T4P7QHoYtiLVxlYgjFp_.png"
 }
