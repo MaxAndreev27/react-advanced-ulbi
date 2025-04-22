@@ -24,8 +24,7 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 - `npm run lint:scss:fix` - Исправление scss файлов style линтером
 - `npm run format:check` - Запуск проверки форматирования prettier
 - `npm run format:fix` - Запуск исправления форматирования prettier
-- `npm run test:unit` - Хапуск unit тестов с jest
-- `npm run test:ui` - Хапуск скриншотных тестов с loki
+- `npm run test:unit` - Запуск unit тестов с jest
 - `npm run test:ui:ok` - Подтверждение новых скриншотов
 - `npm run test:ui:ci` - Запуск скриншотных тестов в CI
 - `npm run test:ui:report` - Генерация полного отчета для скриншотных тестов
@@ -64,8 +63,7 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 
 1. Обычные unit тесты на jest - `npm run test:unit`
 2. Тесты на компоненты с React testing library -`npm run test:unit`
-3. Скриншотное тестирование с loki `npm run test:ui`
-4. e2e тестирование с Cypress `npm run test:e2e`
+3. e2e тестирование с Cypress `npm run test:e2e`
 
 Подробнее о тестах - [документация тестирование](/docs/tests.md)
 
